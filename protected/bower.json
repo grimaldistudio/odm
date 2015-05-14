@@ -1,0 +1,26 @@
+{
+  "name": "Open Data Manager",
+  "version": "0.0.1",
+  "description": "ODM Open Data Manager",
+  "authors": [
+    "BigDataLab"
+  ],
+  "license": "MIT",
+  "private": "true",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "../themes/standard/assets/vendor/public",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "slick": "*",
+    "slicknav": "~1.0.3",
+    "foundation-icon-fonts": "*",
+    "openwebicons": "~1.3.1",
+    "entypo-plus": "*"
+  }
+}

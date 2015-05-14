@@ -1,0 +1,552 @@
+2015/05/12 11:07:48 [error] [php] require_once(../vendor/autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:08:03 [error] [php] require_once(vendor/autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:08:14 [error] [php] require_once(/protected/vendor/autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:08:47 [error] [php] require_once(../vendor/autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:08:53 [error] [php] require_once(../../vendor/autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:09:01 [error] [php] require_once(vendor/autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:12:07 [error] [php] require_once(vendor/autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:12:08 [error] [php] require_once(vendor/autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:12:57 [error] [php] require_once(vendor/autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:13:04 [error] [php] Undefined variable: parser (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:10)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#1 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (10)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:13:47 [error] [php] require_once(vendor/autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:17:13 [error] [exception.CException] exception 'CException' with message 'L'alias "autoload.php" non è valido. Verificare che punti ad una cartella o file esistente.' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/YiiBase.php:347
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php(8): YiiBase::import('autoload.php')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(281): SiteController->init()
+#2 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2015/05/12 11:18:55 [error] [php] require_once(autoload.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php:9)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (9)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php (9)
+in /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php (13)
+2015/05/12 11:19:12 [error] [exception.CException] exception 'CException' with message 'L'alias "vendor/autoload.php" non è valido. Verificare che punti ad una cartella o file esistente.' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/YiiBase.php:347
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/protected/controllers/SiteController.php(8): YiiBase::import('vendor/autoload...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(281): SiteController->init()
+#2 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#3 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/
+---
+2015/05/14 10:05:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:08:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:09:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:09:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:10:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:11:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:12:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:12:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:12:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:13:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:13:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:13:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:13:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:14:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:14:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:15:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:15:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:16:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:16:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:16:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:17:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:17:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:17:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:18:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:18:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:19:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:19:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:19:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:19:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:20:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:22:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:22:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/catalog".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('sites/catalog')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/catalog
+---
+2015/05/14 10:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 12:52:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://odm.local/index.php
+---
+2015/05/14 12:56:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/myvendor/public/readmore/catalog.js".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/myvendor/public/readmore/catalog.js
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 13:18:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/vendor/public/entypo-plus/simple-line-icons.css".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/vendor/public/entypo-plus/simple-line-icons.css
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 13:18:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/vendor/public/simple-line-icons-webfont/css/entypo-plus.css".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/vendor/public/simple-line-icons-webfont/css/entypo-plus.css
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 13:19:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/vendor/public/simple-line-icons-webfont/css/entypo-plus.css".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/vendor/public/simple-line-icons-webfont/css/entypo-plus.css
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 13:19:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/vendor/public/entypo-plus/simple-line-icons.css".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/vendor/public/entypo-plus/simple-line-icons.css
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 13:19:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/vendor/public/entypo-plus/simple-line-icons.css".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/vendor/public/entypo-plus/simple-line-icons.css
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 13:19:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/vendor/public/simple-line-icons/simple-line-icons.css".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/vendor/public/simple-line-icons/simple-line-icons.css
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 15:45:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 16:02:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 16:04:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 16:04:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 16:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 16:17:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 16:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 16:44:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---
+2015/05/14 17:57:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/standard/assets/favicon.ico".' in /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/standard...')
+#1 /Applications/XAMPP/xamppfiles/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/Open Data Manager/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/standard/assets/favicon.ico
+HTTP_REFERER=http://roma.odm.local/site/catalog
+---

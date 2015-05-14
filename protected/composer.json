@@ -1,0 +1,6 @@
+{
+    "name": "odm",
+    "require": {
+	"jeremykendall/php-domain-parser": "~2.0"
+    }
+}
