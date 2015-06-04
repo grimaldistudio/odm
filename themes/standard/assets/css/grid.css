@@ -20,9 +20,15 @@ table.dataTable thead tr th, table.dataTable thead tr td {
     text-transform: uppercase;
 }
 
+table.dataTable tr th, table.dataTable tr td  {
+    font-size: 0.815rem;
+}
+
 table.dataTable thead {
    background:  #E8E8E8;
 }
+
+
 
 table.dataTable tr.even, table.dataTable tr.alt, table.dataTable tr:nth-of-type(2n) {
     background: #ffffff;
@@ -33,6 +39,6 @@ table.dataTable tr.odd, table.dataTable tr.alt, table.dataTable tr:nth-of-type(2
 }
 
 table.dataTable.compact thead tr th, table.dataTable.compact tfoot tr th, table.dataTable.compact tfoot tr td, table.dataTable.compact tbody tr th, table.dataTable.compact tbody tr td, table.dataTable.compact tr td {
-   line-height: 0.8rem;
+   line-height: 0.6rem;
 }
 

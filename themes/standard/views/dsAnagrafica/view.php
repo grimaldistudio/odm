@@ -80,12 +80,8 @@ $this->pageTitle=Yii::app()->name;
                     'dataProvider'=>$dataProvider,
                     'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
                     'template' => '{items} {pager}',
-                    'itemsCssClass' => 'dataTable',
-                    'columns'=>array(
-                        'CODICE',          // display the 'title' attribute
-                        'AREA',  // display the 'name' attribute of the 'category' relation
-                       
-                    ),
+                    'itemsCssClass' => 'dataTable compact',
+                    
                 
                 ));
             

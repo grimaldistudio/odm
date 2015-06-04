@@ -10,7 +10,23 @@ class DsAnagraficaController extends Controller
 	 */
 	public function actionView($id)
 	{
-            $dataProvider=new CActiveDataProvider('DsAnagrafica');
+           
+           $model = $this->loadModel($id);
+                    
+            $dataProvider = Yii::app()->db->createCommand()
+                ->select('*')
+                ->from($model->TAB)             
+                ->queryRow();
+            
+            //$count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM '.$model->TAB)->queryScalar();
+            $sql='SELECT * FROM '.$model->TAB;
+            $dataProvider=new CSqlDataProvider($sql, array(
+               // 'totalItemCount'=>$count,
+                'keyField' => 'CODICE',
+                'sort'=>false,
+                'pagination'=>false,
+            ));
+
                 /*
                 $widget=$this->createWidget('ext.EDataTables.EDataTables', array(
                     'id'            => 'DsAnagrafica',
@@ -31,7 +47,7 @@ class DsAnagraficaController extends Controller
                      Yii::app()->end();
                    }
             */
-                $this->render('view', array('model'=>$this->loadModel($id),'dataProvider'=>$dataProvider));
+                $this->render('view', array('model'=>$model,'dataProvider'=>$dataProvider));
 		
 	}
 
