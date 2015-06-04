@@ -30,7 +30,7 @@
             ?>            
             </div>
             <h3>
-                <?php echo CHtml::link($data->TITOLO,array('dsAnagrafica/view','id'=>'1')); ?>
+                <?php echo CHtml::link($data->TITOLO,array('dsAnagrafica/view','id'=>$data->CODICE)); ?>
             </h3>
             <ul class="no-bullet inline-list datasets-tools">
                 <li>creato il <?php echo date('d.m.Y',strtotime($data->D_CRE));?></li>
