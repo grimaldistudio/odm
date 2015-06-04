@@ -195,14 +195,14 @@ $this->pageTitle=Yii::app()->name;
                           <div id="panel1a" class="content active">
                               Il dataset è disponibile nei seguenti formati <br /><br />
                                 <ul class="no-bullet list-simple-min">
-                                    <li><a href="#" class="button tiny secondary"><i class="icon-download"></i> CSV</a></li>
-                                    <li><a href="#" class="button tiny secondary"><i class="icon-download"></i> XLS</a></li>
-                                    <li><a href="#" class="button tiny secondary"><i class="icon-download"></i> XLSX</a></li>
-                                    <li><a href="#" class="button tiny secondary"><i class="icon-download"></i> SQL</a></li>
-                                    <li><a href="#" class="button tiny secondary"><i class="icon-download"></i> XML</a></li>
-                                    <li><a href="#" class="button tiny secondary"><i class="icon-download"></i> RDF</a></li>
-                                    <li><a href="#" class="button tiny secondary"><i class="icon-download"></i> JSON</a></li>
-                                    <li><a href="#" class="button tiny secondary"><i class="icon-download"></i> STRUTTURA</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=csv&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> CSV</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xls&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> XLS</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xlsx&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> XLSX</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=sql&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> SQL</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xml&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> XML</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=rdf&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> RDF</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=json&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> JSON</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=struttura&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> STRUTTURA</a></li>
                                 </ul>
                           </div>
                         </li>

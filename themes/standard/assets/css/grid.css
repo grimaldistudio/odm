@@ -9,6 +9,8 @@ and open the template in the editor.
 */
 table.dataTable {
     background-color: #e6e6e6;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
 }
 
 table.dataTable thead a { 
@@ -18,10 +20,6 @@ table.dataTable thead a {
 table.dataTable thead tr th, table.dataTable thead tr td {
     color: #6a6a6a;
     text-transform: uppercase;
-}
-
-table.dataTable tr th, table.dataTable tr td  {
-    font-size: 0.815rem;
 }
 
 table.dataTable thead {
@@ -40,5 +38,8 @@ table.dataTable tr.odd, table.dataTable tr.alt, table.dataTable tr:nth-of-type(2
 
 table.dataTable.compact thead tr th, table.dataTable.compact tfoot tr th, table.dataTable.compact tfoot tr td, table.dataTable.compact tbody tr th, table.dataTable.compact tbody tr td, table.dataTable.compact tr td {
    line-height: 0.6rem;
+       font-size: 0.70rem;
+       padding: 0.4625rem 0.525rem;
+    color: #5E5E5E;
 }
 
