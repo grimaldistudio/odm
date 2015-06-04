@@ -13,13 +13,32 @@ class ActiveMenu extends CMenu
 {
     public function init()
     {
+        
+         //Categories
+                $criteria=new CDbCriteria(array(
+                        'condition'=>'STATO="0"',                       
+                        'distinct'=>array("AREA"),
+                        'select'=>'AREA, COUNT(*) as totalDatasetInTheCategories',
+                        'group'=>'AREA',
+                ));   
+
+                $dataProvider['Categories'] = new CActiveDataProvider('DsAnagrafica', array(
+                        'pagination'=>false,
+                        'criteria'=>$criteria,
+                ));
+                
+                $subItems = $dataProvider['Categories']->getData();
+                $itemArray = array();
+                foreach($subItems as $item) {                    
+                    array_push($itemArray, array('label'=>$item->AREA . ' ('.$item->totalDatasetInTheCategories.')', 'url'=>array('site/catalog', 'filters'=>strtolower(preg_replace('/[^A-Za-z0-9\-]/', '',$item->AREA)))));
+                }
+                
        $this->items = array(
                                     array('label'=>'Home', 'url'=>array('site/index')),
-                                    array('label'=>'Catalogo', 'url'=>array('site/catalog')),
-                                    array('label'=>'Argomenti', 'url'=>'#','submenuOptions' => array('id'=>'drop1','class'=>'f-dropdown','aria-hidden'=>'true','data-dropdown-content'=>0), 'linkOptions'=>array('class'=>'small secondary radius button dropdown','data-options'=>'is_hover:true;','data-dropdown'=>'drop1'), 'items'=>array(
-                                        array('label'=>'Ambiente (128)', 'url'=>array('product/new', 'tag'=>'new')),
-                                        array('label'=>'Attività produttive (56)', 'url'=>array('product/index', 'tag'=>'popular')),
-                                    )),
+                                    array('label'=>'Catalogo', 'url'=>array('site/catalog', 'filters'=>'')),
+                                    array('label'=>'Argomenti', 'url'=>'#','submenuOptions' => array('id'=>'drop1','class'=>'f-dropdown','aria-hidden'=>'true','data-dropdown-content'=>0), 'linkOptions'=>array('class'=>'small secondary radius button dropdown','data-options'=>'is_hover:true;','data-dropdown'=>'drop1'), 
+                                        'items'=>$itemArray
+                                    ),
                                     array('label'=>'Sviluppatori', 'url'=>array('site/login')),
                                    // array('label'=>'Contatti', 'url'=>array('site/login')),                                   
                                 );
