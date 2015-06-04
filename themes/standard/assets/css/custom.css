@@ -231,6 +231,10 @@ h4 small, h5 small, h6 small {
     padding-right: 0;
 }
 
+ul, ol, dl {
+    font-size: 0.80rem;
+}
+
 /*-----------------------------------*/
 /* FOUNDATION OVERWRITE
 /*-----------------------------------*/
@@ -463,6 +467,7 @@ header ul.inline-list {
 /*              Topics
 /*              Evidence list
 /*              Home Content
+/*              Awesome
 /*              Event List
 /*              Date
 /*              News List
@@ -606,7 +611,7 @@ ul.evidence span{
     padding: 2px 0;
 }
 
-.event-list li i {
+.event-list li i, .event-list i {
     font-size: 2.5em;
 }
 
@@ -633,6 +638,11 @@ span.date .month{
     border: 1px solid #b0b0b0;
     padding: 2px;
   
+}
+
+.awesome-mini .parallax-window {
+    min-height: 200px;
+    background: transparent;
 }
 
 .news-list li {   
@@ -732,7 +742,7 @@ span.date .month{
 
 .catalog-list {
      max-height: 400px;
-     margin:0 20px 0 0;
+     /*margin:0 20px 0 0;*/
 }
 
 
@@ -744,11 +754,11 @@ span.date .month{
     padding: 5px 5px 5px 10px;
 }
 
-.catalog-list li:hover{
+.catalog-list li:hover, .catalog-list li.active {
     background-color: #0171ba;    
 }
 
-.catalog-list li:hover a{
+.catalog-list li:hover a, .catalog-list li.active a {
     color: #ffffff;
 }
 
@@ -798,6 +808,10 @@ span.date .month{
     padding:0 0 0 20px;
 }
 
+.catalog-view-list p {
+    margin: 5px 0 0 0;
+}
+
 .dataset-icon {
     background:url(../img/grid.png) no-repeat 20px center #0171ba;
     width: 100%;
@@ -813,6 +827,100 @@ span.date .month{
         top: 11px;
 }
 
+
+/*-----------------------------------*/
+/* DATASET
+/*-----------------------------------*/
+.dataset {
+    border-top: 5px solid #0171ba;
+    background: #f5f5f5;
+}
+
+.dataset .social a i{
+    font-size: 20px;
+    color: #888888;
+}
+
+.datasets-tools li{
+    font-family: "Montserrat",sans-serif;
+    font-size: 0.7em;
+    
+}
+
+.dataset-share {
+    margin: 5px 0 0 0;
+}
+
+.dataset-share ul li a {
+    margin: 3px 5px 0 0;
+}
+
+.switch-content, .switch-content ul, .switch-content p   {
+    color: #888888;
+    font-family: "Montserrat",sans-serif;
+}
+
+.switch-content strong {
+    color: #2b2b2b;
+}
+
+.switch-content h3{
+    background-color: #0171ba;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 0.85rem;
+}
+
+.switch-content h4{   
+    color: #464646;
+    font-size: 1.1rem;
+    margin:0 0 10px 0;
+    font-weight: normal;
+}
+
+.switch-content h4 i{   
+    background: #464646;
+    font-size: 0.80rem;
+    padding: 0 5px;
+    border: 1px solid #656565;
+    color: #ffffff;
+    margin:0 6px 0 0;
+}
+
+.switch-content .background-white {
+    background: #ffffff;
+    padding: 10px;
+}
+
+.switch-content .list-simple li{
+    border-bottom: 1px solid #e6e6e6;
+    padding: 15px 0 14px 0;
+    font-weight: bold;
+}
+
+.switch-content .list-simple li:last-child{
+    border: 0;
+    padding-bottom:0;
+}
+
+.switch-content .list-simple li span {
+    color: #464646;
+}
+
+.switch-content .list-simple i.gray {
+    color: #e6e6e6;
+}
+.switch-content .list-simple i.blu {
+    color: #0171ba;
+}
+
+.accordion .accordion-navigation > a, .accordion dd > a {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e8e8e8;
+}
 
 
 /*-----------------------------------*/
@@ -889,6 +997,10 @@ span.date .month{
         padding:0;
     }
    
+    .awesome-mini .parallax-window {
+        min-height: 60px;
+        background: transparent;
+    }
    
    }
    

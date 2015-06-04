@@ -12,4 +12,11 @@ $('div.catalog-list').readmore({
   //collapsedHeight: 400,
 });
 
+
+$('.dataset-share ul li a.toggleFunction').click(function(){
+        $(this).parent().next("div").toggle();
+        return false;
+});
+
+
 });

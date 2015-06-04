@@ -11,10 +11,11 @@ class SiteController extends Controller
             
             $host = Yii::app()->getBaseUrl(true);
             
-            $url = $parser->parseUrl($host);
-            $subdomain = $url->host->subdomain;
+            $url = $parser->parseUrl($host);  
+            
+            $subdomain = $url->host;
 
-            Yii::app()->session['clientID'] = strtolower($subdomain);
+            Yii::app()->session['clientID'] = 1;
             
             Yii::app()->name = strtolower($subdomain); //to define
         }
@@ -44,15 +45,101 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+            //Categories
+            $criteria=new CDbCriteria(array(
+                    'condition'=>'STATO="0"',                       
+                    'distinct'=>array("AREA"),
+                    'select'=>'AREA, COUNT(*) as totalDatasetInTheCategories',
+                    'group'=>'AREA',
+            ));   
+
+            $dataProvider['Categories'] = new CActiveDataProvider('DsAnagrafica', array(
+                    'pagination'=>false,
+                    'criteria'=>$criteria,
+            ));
+            
+            
+            //News list
+            $criteria=new CDbCriteria(array(
+                    'condition'=>'ID_PA_ATTIVA="'.Yii::app()->session["clientID"].'"',
+                    'order'=>'D_AGG DESC',               
+            ));   
+
+            $dataProvider['news'] = new CActiveDataProvider('News', array(
+                    'pagination'=>array(
+                        'pageSize'=>3,
+                    ),
+                    'criteria'=>$criteria,
+            ));
+            
+            //Dataset in Evidence
+            $criteria=new CDbCriteria(array(
+                    'condition'=>'EVIDE="1"',
+                    'order'=>'D_AGG DESC',               
+            ));   
+
+            $dataProvider['datasetEvidence'] = new CActiveDataProvider('DsAnagrafica', array(
+                    'pagination'=>false,
+                    'criteria'=>$criteria,
+            ));
                       
-		$this->render('index');
+            $this->render('index',array('dataProvider'=>$dataProvider));
 	}
         
-        public function actionCatalog()
-	{                 
-		$this->render('catalog');
-	}
+        public function actionCatalog($filters)
+	{        
+            
+                $criteria=new CDbCriteria(array(                       
+                        'condition' => "AREA LIKE :match", 
+                        'params'    => array(':match' => "%$filters%"),  
+                        'order'=>'D_AGG DESC',
+                ));
+                
+                 $dataProvider['datasetsFiltered'] = new CActiveDataProvider('DsAnagrafica', array(
+                    'pagination'=>false,
+                    'criteria'=>$criteria,
+                 ));
+                 
+                $count['datasets'] = DsAnagrafica::model()->count($criteria);
+                
+                //Categories
+                $criteria=new CDbCriteria(array(
+                        'condition'=>'STATO="0"',                       
+                        'distinct'=>array("AREA"),
+                        'select'=>'AREA, COUNT(*) as totalDatasetInTheCategories',
+                        'group'=>'AREA',
+                ));   
 
+                $dataProvider['Categories'] = new CActiveDataProvider('DsAnagrafica', array(
+                        'pagination'=>false,
+                        'criteria'=>$criteria,
+                ));
+                
+                //Tags
+                $criteria=new CDbCriteria(array(
+                        'condition'=>'STATO="0"',                                               
+                        'select'=>'LTAG',
+                ));   
+
+                $dataProvider['Tags'] = new CActiveDataProvider('DsAnagrafica', array(
+                        'pagination'=>false,
+                        'criteria'=>$criteria,
+                ));
+                
+                $tags = DsAnagrafica::model()->findAll('STATO=0');
+                $array_tags = array();
+                
+                foreach($tags as $tag) {
+                    $inner_tag = explode(",",$tag->LTAG);
+                    foreach($inner_tag as $t) {
+                        array_push($array_tags, $t);
+                        }   
+                }
+                $dataProvider['Tags'] = array_unique($array_tags);
+                
+		$this->render('catalog',array('count'=>$count,'dataProvider'=>$dataProvider,'filters'=>$filters));
+	}
+        
 	/**
 	 * This is the action to handle external exceptions.
 	 */

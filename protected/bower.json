@@ -21,6 +21,7 @@
     "slicknav": "~1.0.3",
     "foundation-icon-fonts": "*",
     "openwebicons": "~1.3.1",
-    "entypo-plus": "*"
+    "entypo-plus": "*",
+    "parallax.js": "~1.3.2"
   }
 }

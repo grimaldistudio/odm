@@ -40,25 +40,17 @@
                     <div class="large-12 columns">   
 
                         <a href="/" class="marker left" title="<?php echo ''; ?>">
-                            <figure><img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/brand.png" alt="<?php echo ''; ?>" /></figure>
+                           <img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/brand.png" alt="" />
                         </a>           
                                                 
                         <nav id="main-menu" class="hide-for-small-down right">
-                            <ul class="inline-list">
-                                  <li><a href="/">Home</a></li>
-                                   <li><a href="/site/catalog">Catalogo</a></li>
-                                   <li>
-                                       <a href="#" data-dropdown="drop1" data-options="is_hover:true;" class="small secondary radius button dropdown">Argomenti</a>
-                                            <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
-                                             <li><a href="#">Ambiente (128)</a></li>
-                                             <li><a href="#">Attività produttive (56)</a></li>
-                                             <li><a href="#">Cultura (32)</a></li>
-                                            </ul>
-                                   </li>
-                                   <li><a href="#">Sviluppatori</a></li>
-                                   <li><a href="#">Contatti</a></li>  
-                                   <li class="socialize"><a href="#"><i class="icon icon-social-twitter"></i></a></li>
-                             </ul>
+                            <?Php
+                            $this->widget('application.components.ActiveMenu', array(
+                                'htmlOptions'=>array('class'=>'inline-list'),
+                                'encodeLabel'=>false,
+                                ));
+                            ?>
+                           
                         </nav>                                       
                         
                         <section id="mobile-main-menu" class="show-for-small-down"></section>                          
@@ -67,9 +59,6 @@
          
       </header>
     
-    <section class="home-awesome margin-bottom-20 clearfix">       
-            <figure><img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/awesome.jpg" /></figure>
-    </section>
 
 	<?php echo $content; ?>
     
@@ -80,7 +69,7 @@
             <div class="large-12 columns">               
                 <div class="text-right">
                     <p>
-                        &copy; <?php echo date("Y"); ?> ID installazione <img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/odm.png" />
+                        &copy; <?php echo date("Y"); ?> Code <?php echo Yii::app()->session['clientID']; ?> - ver. 1.0.1 <img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/odm.png" />
                     </p>
                 </div>
                     
@@ -88,18 +77,18 @@
         </div>
     </footer>
 
-    <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/vendor/public/foundation/js/vendor/jquery.js"></script>
+  
     <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/vendor/public/foundation/js/foundation.min.js"></script>  
-    <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/vendor/public/foundation/js/foundation/foundation.interchange.js"></script>    
-    <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/vendor/public/foundation/js/foundation/foundation.topbar.js"></script>   
+ 
     <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/vendor/public/slick/dist/slick.min.js"></script> 
-    <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/vendor/public/slicknav/dist/jquery.slicknav.min.js"></script>   
-     
-     <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/myvendor/jquery-social-stream/js/jquery.social.stream.1.5.4.js"></script>
-    
+   
     <script>
       $(document).foundation();
-      
+   </script>
+   
+    <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/vendor/public/slicknav/dist/jquery.slicknav.min.js"></script>        
+    <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/myvendor/jquery-social-stream/js/jquery.social.stream.1.5.4.js"></script>
+    <script>
        $(function(){
 		$('#main-menu').slicknav(
                 {          
