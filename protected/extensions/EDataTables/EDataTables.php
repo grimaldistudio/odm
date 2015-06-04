@@ -281,9 +281,9 @@ class EDataTables extends CGridView
 				} else {
 					//$exceptionParams = array('{class}' => $column['class'], '{column}' => $column['name']);
 					$column=Yii::createComponent($column, $this);
-					//if (!method_exists($column,'getDataCellContent')) {
+					if (!method_exists($column,'getDataCellContent')) {
 						$column->attachBehavior('cellContentBehavior','ext.EDataTables.ECellContentBehavior');
-					//}
+					}
 				}
 			}
 			if($column->id===null)

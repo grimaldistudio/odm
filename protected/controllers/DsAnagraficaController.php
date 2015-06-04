@@ -19,7 +19,9 @@ class DsAnagraficaController extends Controller
                     'options' => array('sdom'=>'<"toolbar">frtip'),
                     'itemsCssClass'=>'compact',
                     'ajaxUrl'       => $this->createUrl('/dsanagrafica/view',array('id'=>$id)),
-                    'columns'       => array('CODICE','AREA'),
+                    'columns'       => array(
+                        array('header'=>'CODICE','value'=>'$data->CODICE'),
+                        ),
                    ));
                    if (!Yii::app()->getRequest()->getIsAjaxRequest()) {
                      $this->render('view', array('widget' => $widget,'model'=>$this->loadModel($id)));
