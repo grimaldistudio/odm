@@ -10,7 +10,7 @@ $this->pageTitle=Yii::app()->name;
 
 <section class="dataset clearfix">
     
-<div class="row-fluid clearfix margin-top-20">
+<div class="row-fluid clearfix padding-top-10">
     
     <div class="large-1 columns hide-for-small-down">
          <div class="dataset-icon">
@@ -34,7 +34,7 @@ $this->pageTitle=Yii::app()->name;
     
 </div>
     
-    <div class="row-fluid clearfix margin-top-10">
+    <div class="row-fluid clearfix">
         
        
          <div class="large-12 columns">
