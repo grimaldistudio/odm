@@ -73,7 +73,24 @@ $this->pageTitle=Yii::app()->name;
     
     <div class="row-fluid margin-top-10">
         <div class="large-9 columns">
-            <?php $widget->run(); ?>
+            <?php //$widget->run(); 
+            
+            
+            $this->widget('zii.widgets.grid.CGridView', array(
+                    'dataProvider'=>$dataProvider,
+                    'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
+                    'template' => '{items} {pager}',
+                    'itemsCssClass' => 'dataTable',
+                    'columns'=>array(
+                        'CODICE',          // display the 'title' attribute
+                        'AREA',  // display the 'name' attribute of the 'category' relation
+                       
+                    ),
+                
+                ));
+            
+            ?>
+            
         </div>
         
         <div class="large-3 columns">

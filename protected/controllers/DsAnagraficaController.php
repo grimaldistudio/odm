@@ -11,7 +11,7 @@ class DsAnagraficaController extends Controller
 	public function actionView($id)
 	{
             $dataProvider=new CActiveDataProvider('DsAnagrafica');
-                
+                /*
                 $widget=$this->createWidget('ext.EDataTables.EDataTables', array(
                     'id'            => 'DsAnagrafica',
                     'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
@@ -20,7 +20,7 @@ class DsAnagraficaController extends Controller
                     'itemsCssClass'=>'compact',
                     'ajaxUrl'       => $this->createUrl('/dsanagrafica/view',array('id'=>$id)),
                     'columns'       => array(
-                        array('header'=>'CODICE','value'=>'$data->CODICE'),
+                        'CODICE','AREA'
                         ),
                    ));
                    if (!Yii::app()->getRequest()->getIsAjaxRequest()) {
@@ -30,7 +30,8 @@ class DsAnagraficaController extends Controller
                      echo json_encode($widget->getFormattedData(intval($_REQUEST['sEcho'])));
                      Yii::app()->end();
                    }
-            
+            */
+                $this->render('view', array('model'=>$this->loadModel($id),'dataProvider'=>$dataProvider));
 		
 	}
 
