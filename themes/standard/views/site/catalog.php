@@ -13,11 +13,11 @@ $this->pageTitle=Yii::app()->name;
        
         <ul class="inline-list">
             <li class="text-center"> 
-                 <figure><img width="55" title="Ambiente" src="/themes/standard/assets/img/icon/ambiente.png"></figure>
+                 <figure><?php echo '<img src="'.Yii::app()->theme->baseUrl.'/assets/img/icon/'.$filters.'.png" title="'.$filters.'" width="55">';?></figure>
                  <span class="radius secondary label-big margin-top-10"><a href="#"><i class="icon-ban"></i></a> Ambiente</span>
             </li>
             
-            <li><h2><?php echo $count['datasets']; ?> <small>DATASET PER L' ARGOMENTO</small><br/>Ambiente</h2></li>          
+            <li><h2><?php echo $count['datasets']; ?> <small>DATASET PER L' ARGOMENTO</small><br/><?php echo ucfirst($filters); ?></h2></li>          
         </ul>
     </div>
 </div>
