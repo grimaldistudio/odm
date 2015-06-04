@@ -18,10 +18,10 @@ class DsAnagraficaController extends Controller
                 ->from($model->TAB)             
                 ->queryRow();
             
-            //$count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM '.$model->TAB)->queryScalar();
+            $count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM '.$model->TAB)->queryScalar();
             $sql='SELECT * FROM '.$model->TAB;
             $dataProvider=new CSqlDataProvider($sql, array(
-               // 'totalItemCount'=>$count,
+                'totalItemCount'=>$count,
                 'keyField' => 'CODICE',
                 'sort'=>false,
                 'pagination'=>false,

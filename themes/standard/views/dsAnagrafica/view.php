@@ -145,8 +145,8 @@ $this->pageTitle=Yii::app()->name;
                           <h4><i class="fi-page-filled"></i>Meta</h4>
                           <ul class="no-bullet background-white list-simple">
                               <li>Categoria <span class="right"><?php echo $model->AREA; ?></span></li>
-                              <li>Tags<span class="right"><?php echo $model->DESCRIZIONE; ?></span></li>
-                              <li>Numero di record <span class="right">121</span></li>                            
+                              <li>Tags<span class="right"><?php echo $model->LTAG; ?></span></li>
+                              <li>Numero di record <span class="right"><?php echo $dataProvider->totalItemCount;?></span></li>                            
                           </ul>
                       </div>
                  </div>
