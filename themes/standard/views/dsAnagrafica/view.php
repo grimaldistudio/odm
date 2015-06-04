@@ -113,7 +113,7 @@ $this->pageTitle=Yii::app()->name;
                  <div class="row margin-top-20">
                       <div class="large-12 columns">
                           <div class="background-white">
-                             <?php echo '<img src="data:image/jpeg;base64,' . base64_encode( $model->IMG_DETT ) . '" />'; ?>
+                             <?php echo '<img src="data:image/jpeg;base64,' .  $model->IMG_DETT  . '" />'; ?>                             
                           </div>
                         
                       </div>
