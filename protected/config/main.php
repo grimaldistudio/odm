@@ -42,7 +42,7 @@ return array(
             'clientScript'=>array(
                 'packages'=>array(
                     'jquery'=>array(
-                        'baseUrl'=>'/themes/standard/assets/vendor/public/foundation/js/vendor/',
+                        'baseUrl'=>'themes/standard/assets/vendor/public/foundation/js/vendor/',
                         'js'=>array('jquery.js'),
                     )
             ),),
