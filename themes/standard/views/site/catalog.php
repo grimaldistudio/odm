@@ -14,7 +14,7 @@ $this->pageTitle=Yii::app()->name;
         <ul class="inline-list">
             <li class="text-center"> 
                  <figure><?php echo '<img src="'.Yii::app()->theme->baseUrl.'/assets/img/icon/'.$filters.'.png" title="'.$filters.'" width="55">';?></figure>
-                 <span class="radius secondary label-big margin-top-10"><a href="#"><i class="icon-ban"></i></a> Ambiente</span>
+                 <span class="radius secondary label-big margin-top-10"><a href="#"><i class="icon-ban"></i></a> <?php echo ucfirst($filters); ?></span>
             </li>
             
             <li><h2><?php echo $count['datasets']; ?> <small>DATASET PER L' ARGOMENTO</small><br/><?php echo ucfirst($filters); ?></h2></li>          

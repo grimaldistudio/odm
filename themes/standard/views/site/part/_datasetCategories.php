@@ -6,4 +6,8 @@
  * and open the template in the editor.
  */
 ?>
-<li <?php echo (strtolower($data->AREA) == $filters) ? 'class="active"' : '' ?>><a href="#"><?php echo $data->AREA; ?> (<?php echo $data->totalDatasetInTheCategories; ?>)</a></li>
+<li <?php echo (strtolower(preg_replace('/[^A-Za-z0-9\-]/', '',$data->AREA)) == $filters) ? 'class="active"' : '' ?>>
+    
+    <?php echo CHtml::link($data->AREA .' ('.$data->totalDatasetInTheCategories.')',array('site/catalog','filters'=>strtolower(preg_replace('/[^A-Za-z0-9\-]/', '',$data->AREA)))); ?>  
+    
+</li>
