@@ -47,7 +47,7 @@ class SiteController extends Controller
 	{
             //Categories
             $criteria=new CDbCriteria(array(
-                    'condition'=>'STATO="0"',                       
+                    'condition'=>'STATO="0" OR STATO="1" ',                       
                     'distinct'=>array("AREA"),
                     'select'=>'AREA, COUNT(*) as totalDatasetInTheCategories',
                     'group'=>'AREA',
