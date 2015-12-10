@@ -51,7 +51,7 @@ class ActiveMenu extends CMenu
         $items = Altro::model()->findAll($criteria);
 
         foreach ($items as $item)
-           $this->items[] = array('label'=>$item->TITOLO, 'url'=>'site/pageload/'.$item->CODICE);
+           $this->items[] = array('label'=>$item->TITOLO, 'url'=>Yii::app()->createUrl('site/pageload/',array('id'=>$item->CODICE)));
         
         
         $this->items[] = array('label'=>'<i class="icon icon-social-twitter"></i>', 'itemOptions' => array('class'=>'socialize'), 'url'=>array('site/login'));
