@@ -16,7 +16,7 @@ class ActiveMenu extends CMenu
         
          //Categories
                 $criteria=new CDbCriteria(array(
-                        'condition'=>'STATO="0"',                       
+                        'condition'=>'STATO="0" OR STATO="1" ',                        
                         'distinct'=>array("AREA"),
                         'select'=>'AREA, COUNT(*) as totalDatasetInTheCategories',
                         'group'=>'AREA',
@@ -35,11 +35,11 @@ class ActiveMenu extends CMenu
                 
        $this->items = array(
                                     array('label'=>'Home', 'url'=>array('site/index')),
-                                    array('label'=>'Catalogo', 'url'=>array('site/catalog', 'filters'=>'')),
+                                    array('label'=>'Dati', 'url'=>array('site/catalog', 'filters'=>'')),
                                     array('label'=>'Argomenti', 'url'=>'#','submenuOptions' => array('id'=>'drop1','class'=>'f-dropdown','aria-hidden'=>'true','data-dropdown-content'=>0), 'linkOptions'=>array('class'=>'small secondary radius button dropdown','data-options'=>'is_hover:true;','data-dropdown'=>'drop1'), 
                                         'items'=>$itemArray
                                     ),
-                                    array('label'=>'Sviluppatori', 'url'=>array('site/login')),
+                                    array('label'=>'Sviluppatori', 'url'=>array('site/content/page/sviluppatori')),
                                    // array('label'=>'Contatti', 'url'=>array('site/login')),                                   
                                 );
                 

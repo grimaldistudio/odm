@@ -36,6 +36,12 @@ class SiteController extends Controller
 			'page'=>array(
 				'class'=>'CViewAction',
 			),
+                        'search'=>array(
+                                'class'=>'ext.esearch.SearchAction',
+                                'model'=>'DsAnagrafica',
+                                'attributes'=>array('TITOLO'),
+                            ),
+        
 		);
 	}
         
@@ -82,8 +88,10 @@ class SiteController extends Controller
                     'pagination'=>false,
                     'criteria'=>$criteria,
             ));
+            
+            $data['datasetCount'] = DsAnagrafica::model()->count('STATO < 2');
                       
-            $this->render('index',array('dataProvider'=>$dataProvider));
+            $this->render('index',array('dataProvider'=>$dataProvider,'data'=>$data));
 	}
         
         public function actionCatalog($filters)
@@ -153,6 +161,14 @@ class SiteController extends Controller
 				$this->render('error', $error);
 		}
 	}
+        
+        public function actionContent($page)
+	{
+            
+          $data = array();
+          
+            $this->render($page, $data);
+        }
 
 	/**
 	 * Displays the contact page

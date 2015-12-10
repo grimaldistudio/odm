@@ -4,7 +4,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 01-gen-2015, 12.19.41
+ 
 */
 
 
@@ -217,9 +217,14 @@ h4 small, h5 small, h6 small {
 }
 
 .background-gray {
-    background-color: #F2F2F2;
+    /*background-color: #F2F2F2;*/
+    background-color: #ecf0f1;
 }
 
+.background-gray-light {
+   background-color:  #EFEFEF;
+   padding: 20px 0 40px 0;
+}
 
 .row-fluid {
     width: 100%;
@@ -473,6 +478,7 @@ header ul.inline-list {
 /*              News List
 /*              Highlights List
 /*              Trasparente
+/*              Page Content
 /*-----------------------------------*/
 
 .title-block {
@@ -733,6 +739,7 @@ span.date .month{
     padding: 2px 0;
 }
 
+
 /*-----------------------------------*/
 /* CATALOG
 /*-----------------------------------*/
@@ -939,6 +946,45 @@ span.date .month{
     padding: 0 0 40px 0;
 }
 
+/*-----------------------------------*/
+/* PAGE CONTENT
+/*-----------------------------------*/
+section.page-head {
+    background:#FFFFFF;
+}
+
+section.page-head h2 {
+        color: #333e49;
+          margin-bottom: 40px;
+}
+
+
+section.page-content {
+    background: #ECF0F1;
+}
+
+section.page-content p {
+    color: #ECF0F1;
+    font-size: 16px;
+     font-weight: 300;
+    line-height: 1.5em;
+    color: #666;
+       font-family: "Raleway",sans-serif;
+         margin-bottom: 1.63em;
+}
+
+section.page-content h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/*-----------------------------------*/
+/* VARIE
+/*-----------------------------------*/
+
+.portlet-content .arrow-search {
+    display:none;
+}
 /*-----------------------------------*/
 /* MEDIA QUERY
 /*-----------------------------------*/

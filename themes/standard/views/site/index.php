@@ -5,33 +5,36 @@ $this->pageTitle=Yii::app()->name;
 
 ?>
 
-<section class="awesome margin-bottom-20 clearfix">    
+<section class="awesome clearfix">    
     <img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/awesome.jpg" />
 </section>
 
+<section class="background-gray-light">
+
 <div class="row">
-    <div class="large-12 columns text-center margin-top-20">
-        <h2><small>Catalogo Open Data</small><br/>Raccolta di dataset divisi per argomenti</h2>
-        <p class="lead">il portale dei dati aperti</p>
+    <div class="large-12 columns text-center margin-top-40">
+        <h2>Il portale dei dati aperti</h2>
+        <p class="lead">cerca tra i <?php echo $data['datasetCount']; ?> datasets</p>
     </div>
 </div>
 
 <div class="row text-center">
     <div class="large-9  large-centered columns ">
-     <div class="row collapse">
-         <label> <img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/arrow_down.png" alt="" /> </label>
-        <div class="small-10 columns">
-          <input type="text" placeholder="cerca nei dataset" />
-        </div>
-        <div class="small-2 columns">
-            <span class="button postfix"><i class="icon-magnifier"></i></span>
-        </div>
-      </div>
+         <?php $this->widget('ext.esearch.SearchBoxPortlet'); ?>    
+    </div>
+</div>
+
+</section>
+
+<div class="row">
+    <div class="large-12 columns text-center margin-top-40">
+        <h2><small>Catalogo open data</small><br/>Raccolta di dataset divisi per argomento</h2>
+        
     </div>
 </div>
 
 <div class="row margin-top-40">
-    <div class="large-12 columns text-center margin-top-20">
+    <div class="large-12 columns text-center margin-top-40">
 
             <?php
                     $this->widget('zii.widgets.CListView', array(
@@ -50,7 +53,7 @@ $this->pageTitle=Yii::app()->name;
     
     <div class="row">
         <div class="large-12 columns text-center">
-            <p class="lead"><strong>OPEN DATA</strong> testo da definire <a class="button small radius">Scopri gli Open Data</a></p>
+            <p class="lead"><strong>OPEN DATA</strong> il portale dei dati aperti <a class="button small radius">Scopri gli Open Data</a></p>
         </div>
     </div>
     

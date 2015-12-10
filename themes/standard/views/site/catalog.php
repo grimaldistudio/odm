@@ -17,7 +17,12 @@ $this->pageTitle=Yii::app()->name;
                  <span class="radius secondary label-big margin-top-10"><a href="#"><i class="icon-ban"></i></a> <?php echo ucfirst($filters); ?></span>
             </li>
             
-            <li><h2><?php echo $count['datasets']; ?> <small>DATASET PER L' ARGOMENTO</small><br/><?php echo ucfirst($filters); ?></h2></li>          
+            <li><?php if(!empty($filters)): ?><h2><?php echo $count['datasets']; ?> <small>DATASET PER L' ARGOMENTO</small><br/><?php echo ucfirst($filters); ?></h2>
+            <?php else: ?>
+                <h2>CATALOGO <small>DEI DATASET</small></h2> 
+                <h4>trovati <?php echo $count['datasets']; ?> datasets</h4>
+            <?php endif ?>
+            </li>          
         </ul>
     </div>
 </div>
@@ -30,22 +35,7 @@ $this->pageTitle=Yii::app()->name;
             
             <div class="catalog-left right">
                 
-                    <form>                        
-                    <div class="row text-center collapse">
-                           <div class="large-12  large-centered columns ">
-                            <div class="row collapse">
-                                <label></label>
-                               <div class="small-10 columns">
-                                 <input type="text" placeholder="cerca nei dataset" />
-                               </div>
-                               <div class="small-2 columns">
-                                   <span class="button postfix"><i class="icon-magnifier"></i></span>
-                               </div>
-                             </div>
-                           </div>
-                       </div>                       
-
-                    </form>
+                    <?php $this->widget('ext.esearch.SearchBoxPortlet'); ?>   
                 
                     <div class="catalog-list">
                         
