@@ -985,6 +985,11 @@ section.page-content h4{
 .portlet-content .arrow-search {
     display:none;
 }
+
+article ul {
+    list-style: none;
+    margin:20px 0 0 10px;
+}
 /*-----------------------------------*/
 /* MEDIA QUERY
 /*-----------------------------------*/
