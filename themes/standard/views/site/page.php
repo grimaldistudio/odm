@@ -11,7 +11,7 @@ $this->pageTitle=Yii::app()->name;
 <section class="page-head">
 <div class="row">
     <div class="large-12 columns margin-top-20">        
-        <h2>SVILUPPATORI</h2>
+        <h2><?php echo $data['altro']->TITOLO; ?></h2>
     </div>
 </div>
 </section>
@@ -19,9 +19,8 @@ $this->pageTitle=Yii::app()->name;
 <section class="page-content">
     <div class="row">
     <div class="large-12 columns margin-top-20"> 
-    <article>
-        <h4>Titolo</h4>
-        <p>testo da inserire</p>
+    <article>        
+        <?php echo $data['altro']->TESTO; ?>
     </article>
     </div>
     </div>

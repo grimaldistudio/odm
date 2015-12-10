@@ -169,6 +169,15 @@ class SiteController extends Controller
           
             $this->render($page, $data);
         }
+        
+        public function actionPageload($id)
+	{
+            $model = Altro::model()->findByPk($id);
+            $data = array();
+            $data['altro'] = $model;
+          
+            $this->render('page', array('data'=>$data));
+        }
 
 	/**
 	 * Displays the contact page

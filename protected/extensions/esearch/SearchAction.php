@@ -78,7 +78,7 @@ class SearchAction extends CAction {
 	}
 
 	public function init() {
-Yii::app()->clientScript->registerCoreScript('jquery');
+                Yii::app()->clientScript->registerCoreScript('jquery');
 		$this->attributes = (array) $this->attributes;
 		$this->showAttributes = (array) $this->showAttributes;
 
