@@ -30,7 +30,7 @@ class ActiveMenu extends CMenu
                 $subItems = $dataProvider['Categories']->getData();
                 $itemArray = array();
                 foreach($subItems as $item) {                    
-                    array_push($itemArray, array('label'=>$item->AREA . ' ('.$item->totalDatasetInTheCategories.')', 'url'=>array('site/catalog', 'filters'=>strtolower(preg_replace('/[^A-Za-z0-9\-]/', '',$item->AREA)))));
+                    array_push($itemArray, array('label'=>$item->AREA . ' ('.$item->totalDatasetInTheCategories.')', 'url'=>array('site/catalog', 'filters'=>strtolower($item->AREA))));
                 }
                 
        $this->items = array(
