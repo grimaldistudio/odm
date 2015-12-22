@@ -47,3 +47,16 @@ table.dataTable.compact thead tr th, table.dataTable.compact tfoot tr th, table.
     color: #5E5E5E;
 }
 
+.dataTables_toolbar {
+    display: none;
+}
+
+.dataTables_filter {
+    position:absolute;
+    top:-42px;
+    right:120px;
+}
+
+div.dataTables_filter input{
+    height: 32px !important;
+}

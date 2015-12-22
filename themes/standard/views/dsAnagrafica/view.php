@@ -12,12 +12,7 @@ $this->pageTitle=Yii::app()->name;
     
 <div class="row-fluid clearfix padding-top-10">
     
-    <div class="large-1 columns hide-for-small-down">
-         <div class="dataset-icon">
-            <div><?php echo $model->CODICE; ?>.</div>
-        </div>
-    </div>
-    
+      
     <div class="large-8 small-12 catalog-view-list columns">
          <h3><?php echo $model->TITOLO; ?></h3>
          <p><?php echo $model->DESCRIZIONE; ?></p>                           
@@ -31,36 +26,25 @@ $this->pageTitle=Yii::app()->name;
          </ul>
          <a href="" class="hide-for-small-down"><i class="icon-size-fullscreen"></i></a>
      </div>
+     
     
 </div>
     
     <div class="row-fluid clearfix">
-        
-       
+   
+    
          <div class="large-12 columns">
               
              <div class="right">   
                  
                  <div class="button-bar"> 
                      
-                      <ul class="button-group"> 
-                        <li>
-                            <div class="row collapse">
-                               <label>  </label>
-                               <div class="small-10 columns">
-                                 <input type="text" placeholder="cerca nei dataset" />
-                               </div>
-                               <div class="small-2 columns">
-                                   <span class="button postfix"><i class="icon-magnifier"></i></span>
-                               </div>
-                               </div>
-                        </li>
-                      </ul>
+                      
                 
                         <ul class="button-group">                    
                          <li><a href="#" data-switch-rel="info" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-info"></i> Informazioni</a></li>
                          <li><a href="#" data-switch-rel="export" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-download"></i> Esporta</a></li>
-                         <li><a href="#" class="button secondary tiny"><i class="icon-code"></i> Incorpora</a></li>
+                         <li><a href="#" data-switch-rel="embed" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-code"></i> Incorpora</a></li>
                          <li><a href="#" class="button secondary tiny"><i class="icon-vector"></i> Altre Fonti</a></li>
                          <li><a href="#" class="button secondary tiny"><i class="icon-bubbles"></i> Discuti</a></li>
                        </ul>
@@ -71,20 +55,12 @@ $this->pageTitle=Yii::app()->name;
          </div>
     </div>
     
-    <div class="row-fluid margin-top-10">
+    <div class="row-fluid large-collapse margin-top-10">
         <div class="large-9 columns">
-            <?php //$widget->run(); 
+            <?php 
             
-            
-            $this->widget('zii.widgets.grid.CGridView', array(
-                    'dataProvider'=>$dataProvider,
-                    'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
-                    'template' => '{items} {pager}',
-                    'itemsCssClass' => 'dataTable compact',
-                    
-                
-                ));
-            
+            $widget->run(); 
+                      
             ?>
             
         </div>
@@ -93,11 +69,11 @@ $this->pageTitle=Yii::app()->name;
             <!-- switch content -->
             <div class="switch-content " id="info">
                 <h3>Informazioni</h3>
-                
+   
                 <div class="row collapse margin-top-10">
                     <div class="large-3 small-12 text-center columns">
                         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/simple-brand.png" alt="" />
-                    </div>
+    </div>
                     <div class="large-9 small-12 columns">
                         <strong>Roma Capitale</strong>
                         <ul class="no-bullet">
@@ -109,7 +85,7 @@ $this->pageTitle=Yii::app()->name;
                         </ul>
                     </div>
                 </div>
-                
+    
                  <div class="row margin-top-20">
                       <div class="large-12 columns">
                           <div class="background-white">
@@ -221,6 +197,26 @@ $this->pageTitle=Yii::app()->name;
                       </ul>
             </div>
             
+            
+              <!-- /switch content -->
+             <div class="switch-content hide" id="embed">
+                 <h3>Incorpora</h3>
+                    <ul class="accordion" data-accordion>
+                        <li class="accordion-navigation">
+                         
+                          <div id="panel1a" class="content active">                             
+                             <p class="background-white">Utilizza il codice per pubblicare questo dataset su altri siti web.</p>
+                             
+                             <label for="embed_odm_code">Incorpora questo dataset</label>
+                               
+                             <textarea name="embed_odm_code" rows="10"><div><iframe width="500px" title="<?php echo $model->TITOLO; ?>" height="425px" src="#" frameborder="0"scrolling="no"><a href="" title="<?php echo $model->TITOLO; ?>" target="_blank"><?php echo $model->TITOLO; ?></a></iframe></div></textarea>
+                                
+                          </div>
+                        </li>
+                        
+                      </ul>
+            </div>
+            
         </div>
     </div>
     
@@ -233,4 +229,11 @@ $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/datatables-plugins/integration/foundation/dataTables.foundation.min.js',CClientScript::POS_END);
 $cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/element-switcher/element-switcher.js',CClientScript::POS_END);
 $cs->registerCssFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/datatables-plugins/integration/foundation/dataTables.foundation.css');
+
+$cs->registerScript('test#',"var calcDataTableHeight = function() {
+       return $(window).height()*55/100;
+   };
+   console.log(oTable);
+   var oTableb = jQuery('#DsAnagrafica').eDataTables({
+       \"sScrollY\": calcDataTableHeight()});");
 ?>

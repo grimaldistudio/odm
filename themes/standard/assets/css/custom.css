@@ -840,7 +840,7 @@ span.date .month{
 /*-----------------------------------*/
 .dataset {
     border-top: 5px solid #0171ba;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 .dataset .social a i{
@@ -865,6 +865,10 @@ span.date .month{
 .dataset .button-group {
     height: 32px;
     max-height: 32px;
+}
+
+.switch-content {
+    background: #F7F7F7;
 }
 
 .switch-content, .switch-content ul, .switch-content p   {

@@ -463,7 +463,7 @@ class EDataTables extends CGridView
 				"sLengthMenu" => Yii::t('EDataTables.edt',"Visualizza _MENU_ elementi"),
 				"sLoadingRecords" => Yii::t('EDataTables.edt',"Caricamento..."),
 				"sProcessing" => Yii::t('EDataTables.edt',"Elaborazione..."),
-				"sSearch" => Yii::t('EDataTables.edt',"Cerca:"),
+				"sSearch" => Yii::t('EDataTables.edt',"Cerca in questo dataset:"),
 				//"sUrl" => "",
 				"sZeroRecords" => Yii::t('EDataTables.edt',"La ricerca non ha portato alcun risultato."),
 			);
@@ -507,14 +507,16 @@ class EDataTables extends CGridView
 		if ($this->buttons === null) {
 			$options['buttons']=array();
 		} else {
+                    
 			$options['buttons']=array_merge(array(
+                            /*
 				'refresh' => array(
 					'label' => Yii::t('EDataTables.edt',"Refresh"),
 					'text' => false,
 					'htmlClass' => 'refreshButton',
 					'icon' => $this->bootstrap ? 'icon-refresh' : 'ui-icon-refresh',
 					'callback' => null //default will be used, if possible
-				),
+				),*/
 				/*'configure' => array(
 					'label' => Yii::t('EDataTables.edt',"Configure"),
 					'text' => false,
@@ -577,7 +579,7 @@ class EDataTables extends CGridView
 		self::initClientScript($this->bootstrap, $this->fixedHeaders !== null, $configurable);
 		$options=CJavaScript::encode($options);
 		$cs=Yii::app()->getClientScript();
-		$cs->registerScript(__CLASS__.'#'.$id,"jQuery('#$id').eDataTables($options);");
+		$cs->registerScript(__CLASS__.'#'.$id,"var oTable = jQuery('#$id').eDataTables($options);");
 		if ($this->fixedHeaders !== null) {
 			//$cs->registerScript(__CLASS__.'#'.$id.'_fixedheader',"new FixedHeader( $.fn.eDataTables.tables['$id'], ".CJavaScript::encode($this->fixedHeaders)." );");
 			//$cs->registerScript(__CLASS__.'#'.$id.'_fixedheader',"new FixedColumns( $.fn.eDataTables.tables['$id'], ".CJavaScript::encode($this->fixedHeaders)." );");

@@ -8,48 +8,76 @@ class DsAnagraficaController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+	public function actionView($id, $embed = null)
 	{
+             if ($embed == 1) $this->layout = 'embed';
            
            $model = $this->loadModel($id);
-                    
-            $dataProvider = Yii::app()->db->createCommand()
+           $criteria = new CDbCriteria;
+           
+           if (isset($_REQUEST['sSearch']) && isset($_REQUEST['sSearch']{0})) {
+               
+               $sql='SHOW COLUMNS FROM '.$model->TAB;
+               $columns = Yii::app()->db
+                     ->createCommand($sql)
+                     ->queryAll();
+               foreach($columns as $val) 
+                $criteria->addSearchCondition($val['Field'], $_REQUEST['sSearch'], true, 'OR', 'LIKE');               
+            }
+
+            $sort = new EDTSort($model, array());
+            $sort->defaultOrder = 'CODICE';
+            /*$pagination = new EDTPagination();*/
+                                 
+            $count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM '.$model->TAB)->queryScalar();            
+                   
+            $sql = Yii::app()->db->createCommand()
                 ->select('*')
-                ->from($model->TAB)             
-                ->queryRow();
+                ->from($model->TAB) 
+                ->where($criteria->condition,  $criteria->params);                  
             
-            $count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM '.$model->TAB)->queryScalar();
-            $sql='SELECT * FROM '.$model->TAB;
+            
+          
             $dataProvider=new CSqlDataProvider($sql, array(
                 'totalItemCount'=>$count,
                 'keyField' => 'CODICE',
-                'sort'=>false,
+                'sort'=>$sort,
                 'pagination'=>false,
             ));
+            
+              
 
-                /*
+               
                 $widget=$this->createWidget('ext.EDataTables.EDataTables', array(
                     'id'            => 'DsAnagrafica',
                     'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
                     'dataProvider'  => $dataProvider,
-                    'options' => array('sdom'=>'<"toolbar">frtip'),
+                    'options' => array('sdom'=>'<"toolbar">frtip', "bProcessing" => true, "scrollCollapse"=>true,  "bPaginate"=> false),
                     'itemsCssClass'=>'compact',
                     'ajaxUrl'       => $this->createUrl('/dsanagrafica/view',array('id'=>$id)),
-                    'columns'       => array(
-                        'CODICE','AREA'
-                        ),
+                    
                    ));
                    if (!Yii::app()->getRequest()->getIsAjaxRequest()) {
-                     $this->render('view', array('widget' => $widget,'model'=>$this->loadModel($id)));
+                       if ($embed == 1) :
+                        $this->render('view_embed', array('widget' => $widget,'model'=>$model, 'dataProvider'=>$dataProvider ));
+                       else:
+                           $this->render('view', array('widget' => $widget,'model'=>$model, 'dataProvider'=>$dataProvider ));
+                       endif;
                      return;
                    } else {
                      echo json_encode($widget->getFormattedData(intval($_REQUEST['sEcho'])));
                      Yii::app()->end();
                    }
-            */
-                $this->render('view', array('model'=>$model,'dataProvider'=>$dataProvider));
+            
+                   if ($embed == 1) :
+                       $this->render('view_embed', array('model'=>$model,'dataProvider'=>$dataProvider));
+                       else:
+                       $this->render('view', array('model'=>$model,'dataProvider'=>$dataProvider));
+                   endif;
+                                   
 		
 	}
+        
 
 
 	/**
