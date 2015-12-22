@@ -98,7 +98,7 @@ class SiteController extends Controller
 	{        
             
                 $criteria=new CDbCriteria(array(                       
-                        'condition' => "STATO <= 1 AND AREA LIKE :match", 
+                        'condition' => "(STATO='0' OR STATO='1') AND (AREA LIKE :match)", 
                         'params'    => array(':match' => "%$filters%"),  
                         'order'=>'D_AGG DESC',
                 ));
