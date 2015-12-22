@@ -8,6 +8,6 @@
 ?>
 <li <?php echo (strtolower(preg_replace('/[^A-Za-z0-9\-]/', '',$data->AREA)) == $filters) ? 'class="active"' : '' ?>>
     
-    <?php echo CHtml::link($data->AREA .' ('.$data->totalDatasetInTheCategories.')',array('site/catalog','filters'=>strtolower(preg_replace('/[^A-Za-z0-9\-]/', '',$data->AREA)))); ?>  
+    <?php echo CHtml::link($data->AREA .' ('.$data->totalDatasetInTheCategories.')',array('site/catalog','filters'=>strtolower($data->AREA))); ?>  
     
 </li>
