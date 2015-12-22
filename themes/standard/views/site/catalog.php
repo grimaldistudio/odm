@@ -15,7 +15,7 @@ $this->pageTitle=Yii::app()->name;
             <li class="text-center"> 
                 <?php if(empty($filters)): ?><figure><?php echo '<img src="'.Yii::app()->theme->baseUrl.'/assets/img/icon/checklist.png" title="Catalogo" width="55">';?></figure>
                 <?php else: ?>
-                 <figure><?php echo '<img src="'.Yii::app()->theme->baseUrl.'/assets/img/icon/'.$filters.'.png" title="'.$filters.'" width="55">';?></figure>
+                 <figure><?php echo '<img src="'.Yii::app()->theme->baseUrl.'/assets/img/icon/'.strtolower(preg_replace('/[^A-Za-z0-9\-]/', '',$data->AREA)).'.png" title="'.$filters.'" width="55">';?></figure>
                  <span class="radius secondary label-big margin-top-10"><a href="#"><i class="icon-ban"></i></a> <?php echo ucfirst($filters); ?></span>
                  <?php endif ?>
             </li>
