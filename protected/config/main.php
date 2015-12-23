@@ -22,7 +22,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',   
-                'ext.EDataTables.*'
+                //'ext.EDataTables.*'
 	),
 
 	'modules'=>array(

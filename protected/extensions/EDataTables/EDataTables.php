@@ -437,7 +437,7 @@ class EDataTables extends CGridView
 			'bStateSave'		=> false,
 			'bPaginate'			=> true,
 			'sCookiePrefix'		=> 'edt_',
-			'bJQueryUI'			=> !$this->bootstrap,
+			'bJQueryUI'			=> !$this->bootstrap,                       
 			'relatedOnlyLabel'	=> Yii::t('EDataTables.edt', 'Only related'),
 		);
 		if (Yii::app()->getLanguage() !== 'en_us') {

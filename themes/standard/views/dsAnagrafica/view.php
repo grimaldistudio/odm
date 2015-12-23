@@ -59,7 +59,13 @@ $this->pageTitle=Yii::app()->name;
         <div class="large-9 columns">
             <?php 
             
-            $widget->run(); 
+            $this->widget('zii.widgets.grid.CGridView', array(
+                'htmlOptions' => array('id'=>'datatable'),
+                 'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
+                 'template' => '{items} {pager}',
+                    'itemsCssClass' => 'display compact',
+                'dataProvider'=>$dataProvider,
+            ));
                       
             ?>
             
@@ -223,17 +229,30 @@ $this->pageTitle=Yii::app()->name;
 </section>
 
 <?php
-//cdn.datatables.net/plug-ins/1.10.7/integration/foundation/dataTables.foundation.css
-//cdn.datatables.net/plug-ins/1.10.7/integration/foundation/dataTables.foundation.js
 $cs = Yii::app()->getClientScript();
-$cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/datatables-plugins/integration/foundation/dataTables.foundation.min.js',CClientScript::POS_END);
-$cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/element-switcher/element-switcher.js',CClientScript::POS_END);
-$cs->registerCssFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/datatables-plugins/integration/foundation/dataTables.foundation.css');
 
-$cs->registerScript('test#',"var calcDataTableHeight = function() {
-       return $(window).height()*55/100;
-   };
-   console.log(oTable);
-   var oTableb = jQuery('#DsAnagrafica').eDataTables({
-       \"sScrollY\": calcDataTableHeight()});");
+$cs->registerScriptFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/datatables.min.js", CClientScript::POS_END);
+$cs->registerScriptFile('https://cdn.datatables.net/1.10.10/js/dataTables.foundation.min.js', CClientScript::POS_END);
+$cs->registerScriptFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/js/dataTables.scroller.min.js", CClientScript::POS_END);
+$cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/datatables.min.css");
+$cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/css/scroller.foundation.min.css");
+$cs->registerCssFile('https://cdn.datatables.net/1.10.10/css/dataTables.foundation.min.css');
+
+
+$cs->registerScript('edatatables#',
+        "
+        $('#datatable table.display').DataTable({
+        \"language\": {
+                \"url\": \"//cdn.datatables.net/plug-ins/1.10.10/i18n/Italian.json\"
+            },             
+        \"info\":     false,
+        deferRender:    true,
+        scrollY:        '90vh',
+        scrollCollapse: true,
+        scroller:       true
+        }
+        );
+        "
+        );
+
 ?>

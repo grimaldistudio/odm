@@ -10,23 +10,29 @@ class DsAnagraficaController extends Controller
 	 */
 	public function actionView($id, $embed = null)
 	{
+            $sortableColumnNamesArray = Array();
+            
              if ($embed == 1) $this->layout = 'embed';
            
            $model = $this->loadModel($id);
            $criteria = new CDbCriteria;
            
-           if (isset($_REQUEST['sSearch']) && isset($_REQUEST['sSearch']{0})) {
-               
-               $sql='SHOW COLUMNS FROM '.$model->TAB;
+            $sql='SHOW COLUMNS FROM '.$model->TAB;
                $columns = Yii::app()->db
                      ->createCommand($sql)
                      ->queryAll();
+           
+           foreach($columns as $val)    
+               array_push ($sortableColumnNamesArray,$val['Field']);
+           
+           if (isset($_REQUEST['sSearch']) && isset($_REQUEST['sSearch']{0})) {                             
                foreach($columns as $val) 
                 $criteria->addSearchCondition($val['Field'], $_REQUEST['sSearch'], true, 'OR', 'LIKE');               
             }
 
-            $sort = new EDTSort($model, array());
-            $sort->defaultOrder = 'CODICE';
+            $sort_by = (isset($_REQUEST['iSortCol_0'])) ? $sortableColumnNamesArray[$_REQUEST['iSortCol_0']] : $sortableColumnNamesArray[0];
+            $sort_dir = (isset($_REQUEST['sSortDir_0'])) ? $_REQUEST['sSortDir_0'] : 'ASC';
+            
             /*$pagination = new EDTPagination();*/
                                  
             $count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM '.$model->TAB)->queryScalar();            
@@ -34,20 +40,16 @@ class DsAnagraficaController extends Controller
             $sql = Yii::app()->db->createCommand()
                 ->select('*')
                 ->from($model->TAB) 
-                ->where($criteria->condition,  $criteria->params);                  
-            
-            
-          
+                ->where($criteria->condition,  $criteria->params)
+                ->order($sort_by." ".$sort_dir);
+
             $dataProvider=new CSqlDataProvider($sql, array(
                 'totalItemCount'=>$count,
                 'keyField' => 'CODICE',
-                'sort'=>$sort,
-                'pagination'=>false,
-            ));
-            
-              
+                'pagination'=>false,               
 
-               
+            ));
+               /*
                 $widget=$this->createWidget('ext.EDataTables.EDataTables', array(
                     'id'            => 'DsAnagrafica',
                     'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
@@ -68,14 +70,14 @@ class DsAnagraficaController extends Controller
                      echo json_encode($widget->getFormattedData(intval($_REQUEST['sEcho'])));
                      Yii::app()->end();
                    }
-            
-                   /*
+            */
+                   
                    if ($embed == 1) :
                        $this->render('view_embed', array('model'=>$model,'dataProvider'=>$dataProvider));
                        else:
                        $this->render('view', array('model'=>$model,'dataProvider'=>$dataProvider));
                    endif;
-                     */              
+                                   
 		
 	}
         

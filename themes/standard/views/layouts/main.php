@@ -30,6 +30,7 @@
     
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300,200' rel='stylesheet' type='text/css'>
+       
     
     <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
     <script type="text/javascript">
@@ -95,6 +96,7 @@
    
     <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/vendor/public/slicknav/dist/jquery.slicknav.min.js"></script>        
     <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/myvendor/jquery-social-stream/js/jquery.social.stream.1.5.4.js"></script>
+           
     <script>
        $(function(){
 		$('#main-menu').slicknav(
