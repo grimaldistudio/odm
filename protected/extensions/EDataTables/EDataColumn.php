@@ -30,7 +30,7 @@ class EDataColumn extends CDataColumn {
 
 	public function getDataCellContent($row) {
 		ob_start();
-		$this->renderDataCellContent($row);
+		$this->renderDataCellContent($row,$this->grid->dataProvider->data[$row]);
 		return ob_get_clean();
 	}
 }
