@@ -80,7 +80,7 @@ class SiteController extends Controller
             
             //Dataset in Evidence
             $criteria=new CDbCriteria(array(
-                    'condition'=>'EVIDE="1"',
+                    'condition'=>'EVIDE="1" AND STATO < 2',
                     'order'=>'D_AGG DESC',               
             ));   
 
