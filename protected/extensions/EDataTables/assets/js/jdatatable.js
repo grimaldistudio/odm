@@ -6,110 +6,6 @@
  * @license http://www.yiiframework.com/license/
  */
 
-/* Default class modification */
-$.extend( $.fn.dataTableExt.oStdClasses, {
-	"sWrapper": "dataTables_wrapper form-inline"
-} );
-
-/* API method to get paging information */
-$.fn.dataTableExt.oApi.fnPagingInfo = function ( oSettings )
-{
-	return {
-		"iStart":         oSettings._iDisplayStart,
-		"iEnd":           oSettings.fnDisplayEnd(),
-		"iLength":        oSettings._iDisplayLength,
-		"iTotal":         oSettings.fnRecordsTotal(),
-		"iFilteredTotal": oSettings.fnRecordsDisplay(),
-		"iPage":          Math.ceil( oSettings._iDisplayStart / oSettings._iDisplayLength ),
-		"iTotalPages":    Math.ceil( oSettings.fnRecordsDisplay() / oSettings._iDisplayLength )
-	};
-}
-
-/* Bootstrap style pagination control */
-$.extend( $.fn.dataTableExt.oPagination, {
-	"bootstrap": {
-		"fnInit": function( oSettings, nPaging, fnDraw ) {
-			var oLang = oSettings.oLanguage.oPaginate;
-			var fnClickHandler = function ( e ) {
-				e.preventDefault();
-				if ( oSettings.oApi._fnPageChange(oSettings, e.data.action) ) {
-					fnDraw( oSettings );
-				}
-			};
-
-			$(nPaging).addClass('pagination').append(
-				'<ul>'+
-					'<li class="first disabled"><a href="#">'+oLang.sFirst+'</a></li>'+
-					'<li class="prev disabled"><a href="#">'+oLang.sPrevious+'</a></li>'+
-					'<li class="next disabled"><a href="#">'+oLang.sNext+'</a></li>'+
-					'<li class="last disabled"><a href="#">'+oLang.sLast+'</a></li>'+
-				'</ul>'
-			);
-			var els = $('a', nPaging);
-			$(els[0]).bind( 'click.DT', { action: "first" }, fnClickHandler );
-			$(els[1]).bind( 'click.DT', { action: "previous" }, fnClickHandler );
-			$(els[2]).bind( 'click.DT', { action: "next" }, fnClickHandler );
-			$(els[3]).bind( 'click.DT', { action: "last" }, fnClickHandler );
-		},
-
-		"fnUpdate": function ( oSettings, fnDraw ) {
-			var iListLength = 5;
-			var oPaging = oSettings.oInstance.fnPagingInfo();
-			var an = oSettings.aanFeatures.p;
-			var i, j, sClass, iStart, iEnd, iHalf=Math.floor(iListLength/2);
-
-			if ( oPaging.iTotalPages < iListLength) {
-				iStart = 1;
-				iEnd = oPaging.iTotalPages;
-			}
-			else if ( oPaging.iPage <= iHalf ) {
-				iStart = 1;
-				iEnd = iListLength;
-			} else if ( oPaging.iPage >= (oPaging.iTotalPages-iHalf) ) {
-				iStart = oPaging.iTotalPages - iListLength + 1;
-				iEnd = oPaging.iTotalPages;
-			} else {
-				iStart = oPaging.iPage - iHalf + 1;
-				iEnd = iStart + iListLength - 1;
-			}
-
-			for ( i=0, iLen=an.length ; i<iLen ; i++ ) {
-				// Remove the middle elements
-				var size = $('li',an[i]).size();
-				$('li:gt(1)', an[i]).filter(':lt('+(size-4)+')').remove();
-				size = $('li',an[i]).size();
-				var prelast = $('li:eq('+(size-2)+')', an[i]);
-
-				// Add the new list items and their event handlers
-				for ( j=iStart ; j<=iEnd ; j++ ) {
-					sClass = (j==oPaging.iPage+1) ? 'class="active"' : '';
-					$('<li '+sClass+'><a href="#">'+j+'</a></li>')
-						.insertBefore( prelast[0] )
-						.bind('click', function (e) {
-							e.preventDefault();
-							oSettings._iDisplayStart = (parseInt($('a', this).text(),10)-1) * oPaging.iLength;
-							fnDraw( oSettings );
-						} );
-				}
-
-				// Add / remove disabled classes from the static elements
-				if ( oPaging.iPage === 0 ) {
-					$('li:lt(2)', an[i]).addClass('disabled');
-				} else {
-					$('li:lt(2)', an[i]).removeClass('disabled');
-				}
-
-				size = $('li',an[i]).size();
-				if ( oPaging.iPage === oPaging.iTotalPages-1 || oPaging.iTotalPages === 0 ) {
-					$('li:gt('+(size-3)+')', an[i]).addClass('disabled');
-				} else {
-					$('li:gt('+(size-3)+')', an[i]).removeClass('disabled');
-				}
-			}
-		}
-	}
-} );
-
 (function($) {
 	"use strict";
 	var methods = {
@@ -158,7 +54,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 					var base_values = input_values.data('base');
 					var row_id = $.fn.eDataTables.getKey(id, $(e.target).parents('tr:first').index());
 					var index = $(e.target).attr('id').substr(0,$(e.target).attr('id').indexOf('_row'));
-					
+
 					if (typeof list_values == 'undefined') list_values = {};
 					if (typeof list_values[row_id] == 'undefined') list_values[row_id] = {};
 					var value;
@@ -176,7 +72,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 					} else {
 						list_values[row_id][index] = value;
 					}
-					
+
 					input_values.val($.param(list_values)).data('list',list_values);
 					if(typeof settings.editableEvents == 'function') {
 						settings.editableEvents(e);
@@ -210,13 +106,12 @@ $.extend( $.fn.dataTableExt.oPagination, {
 			}
 
 			settings.fnDrawCallback = $.fn.eDataTables.drawCallback;
-			$.fn.eDataTables.tables[id] = jQuery('#'+id+' table').dataTable(settings).fnSetFilteringDelay();
-			if (settings.bScrollCollapse)
-				$('#'+id+' .dataTables_wrapper').css({'min-height':'0px'});
+			$.fn.eDataTables.tables[id] = jQuery('#'+id+' table').DataTable(settings);
 
 			// -----------------------
 			// configuration
-			$this.eDataTables('initConfigRow', settings);
+			//! @todo remove this, moved into initToolbar
+			//$this.eDataTables('initConfigRow', settings);
 
 			// -----------------------
 			// toolbar
@@ -229,7 +124,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 				$('#' + id + '-deselected').val('').data('list', {});
 				$('#' + id + '-disconnect').val('').data('list', {});
 				$('#' + id + '-values').val('').data('list', {});
-				
+
 				$('input.select-on-check-all').removeAttr('checked');
 				$('input.select-on-check-all').prop('indeterminate', false);
 			});
@@ -388,7 +283,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 				this.eDataTables('refresh');
 				return;
 			}
-			
+
 			if (settings.filterForm === null) {
 				// if we can't track it, assume it changes every time
 				changed = true;
@@ -420,7 +315,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 				$('input.select-on-check-all').removeAttr('checked');
 				$('input.select-on-check-all').prop('indeterminate', false);
 
-			}			
+			}
 			this.eDataTables('refresh');
  		},
 
@@ -457,13 +352,15 @@ $.extend( $.fn.dataTableExt.oPagination, {
 					visible.push({id: aoColumns[i].sName, text: aoColumns[i].sTitle});
 				}
 			}
-			var configList = $('<input type="hidden" value="'+value.join(',')+'">').appendTo(configureRow);
+			var configList = $('<input id="'+id+'_configRow" type="hidden" value="'+value.join(',')+'">').appendTo(configureRow);
 			// obtain a list of visible columns
 			// add a hidden input
 			// init select2
 			configList.select2({
 				data: data,
 				multiple: true,
+				//width: '10%',
+				dropdownAutoWidth: true,
 				initSelection: function(element, callback) { callback(visible); }
 			}).on("change", function(e) {
 				var aoColumns = oTable.fnSettings().aoColumns;
@@ -526,6 +423,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 				}
 				// make a complete refresh so the backend can save all UI changes
 				$this.eDataTables('refresh');
+				return true;
 			});
 			configList.select2("container").find("ul.select2-choices").sortable({
 				containment: 'parent',
@@ -541,40 +439,71 @@ $.extend( $.fn.dataTableExt.oPagination, {
 			var toolbar = $('#'+id+' .dataTables_toolbar');
 			if (toolbar.length == 0)
 				return false;
-			
+
+			$this.eDataTables('initConfigControl', settings, toolbar);
+
 			if (settings.relatedOnlyOption) {
 				var checked = settings.relatedOnlyOption == '2' ? ' checked="checked"' : '';
 				$('<input type="checkbox" id="'+id+'_relatedOnly" value="1"'+checked+'/><label for="'+id+'_relatedOnly">'+settings.relatedOnlyLabel+'</label>').appendTo(toolbar);
 			}
+
+			$this.eDataTables('initButtons', settings, toolbar);
+		},
+
+		initButtons: function(settings, toolbar) {
+			var $this = $(this);
+			var id = this.attr('id');
 			for (var i in settings.buttons) {
 				if (settings.buttons[i] == null) {
 					// skip if definition is missing (disabling defaults)
 					continue;
 				}
-				var button = $($.fn.eDataTables.buttonToHtml(settings.buttons[i], settings.bootstrap)).appendTo(toolbar);
-				if (!settings.bootstrap) {
+				var button = $($.fn.eDataTables.buttonToHtml(settings.buttons[i])).appendTo(toolbar);
+				if (!settings.buttons[i].init || typeof settings.buttons[i].init != 'function') {
 					button.button({icons: {primary:settings.buttons[i].icon}, text: settings.buttons[i].text});
-				}
-				if (settings.buttons[i].callback == null) {
-					switch(i) {
-						case 'configure':	button.click(function(){$('#'+id+' > div.dataTables_wrapper > div:first').toggle(); return false;}); break;
-						case 'refresh':	button.click(function(){$this.eDataTables('refresh'); return false;}); break;
-						case 'print':	button.click(function(){return false;}); break;
-						case 'export':	button.click(function(){return false;}); break;
-						case 'new':		button.click(function(){return false;}); break;
-						default: break;
-					}
 				} else {
+					settings.buttons[i].init(button, settings.buttons[i]);
+				}
+				if (typeof settings.buttons[i].callback != 'undefined') {
 					button.click({'id': id, 'that': $this, 'settings': settings}, settings.buttons[i].callback);
 				}
 			}
-			if (settings.bootstrap) { //reinitialize tooltips and popovers
-				$('a[rel=tooltip]').tooltip();
-				$('a[rel=popover]').popover();
+			return true;
+		},
+
+		initConfigControl: function(settings, toolbar) {
+			var id = this.attr('id');
+			var $this = $(this);
+
+			if (!settings.configurable)
+				return false;
+
+			//! @todo insert a select with all column names as options, attach callbacks to show/hide columns
+			var select = $('<select id="'+id+'_columns" style="width: 7em;"></select>').appendTo(toolbar);
+			$('<option value="">'+settings.columnsListLabel+'</option>').appendTo(select);
+
+			var oTable = $('#'+id+' table[id]').dataTable();
+			var aoColumns = oTable.fnSettings().aoColumns;
+			for (var i = 0; i < aoColumns.length; i++) {
+				var c = aoColumns[i];
+				$('<option value="'+i+'">'+(aoColumns[i].bVisible?'ukryj':'pokaż')+' '+c.sTitle+'</option>').appendTo(select); // '+(c.bVisible?' selected="selected"':'')+'
+				/*if (aoColumns[i].bVisible) { }*/
 			}
+			select.on('change', function(e){
+				var index = $(this).val();
+				var visible = oTable.fnSettings().aoColumns[index].bVisible;
+				// update label of selected option
+				var option = $('option:selected', $(this));
+				var pos = option.html().indexOf(' ');
+				option.html((!visible ? 'ukryj' : 'pokaż')+option.html().substr(pos));
+				oTable.fnSetColumnVis( index, !visible, false );
+				$(this).val('');
+				$this.eDataTables('refresh');
+			});
 		},
 
 		toggleSelection: function(target) {
+			var $this = $(this);
 			var id = this.attr('id');
 			var settings = $.fn.eDataTables.settings[id];
 
@@ -602,7 +531,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 			} else if ($(target).hasClass('dropdown-select-page') || $(target).hasClass('dropdown-deselect-page')) {
 /*select/deselect page*/
 				var check_page = $(target).hasClass('dropdown-select-page');
-				
+
 				var checkbox2 = $(target).closest('div.dropdown').find(':checkbox');
 				var name2 = checkbox2.attr('name').replace('_all', '[]');
 				checkbox2.attr('checked', check_page);
@@ -612,7 +541,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 					$(this).parent().parent().toggleClass('selected',check_page);
 					$.fn.eDataTables.select(id, this);
 				});
-			} else if ($(target).hasClass('select-on-check')){ 
+			} else if ($(target).hasClass('select-on-check')){
 /*select one row by checkbox*/
 				var $row = $(target).parent().parent();
 				if(settings.selectableRows == 1){
@@ -679,7 +608,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 			for (var d in list_selected) selected_size++;
 			for (var e in list_deselected) deselected_size++;
 			for (var f in list_disconnect) disconnect_size++;
-			
+
 			return (selected_size != 0 && selected_size != total_records)
 					|| (all_selected && (deselected_size + disconnect_size != total_records) && (deselected_size + disconnect_size != 0));
 		},
@@ -741,10 +670,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 	 */
 	$.fn.eDataTables.drawCallback = function(oSettings) {
 		// iterate on all checkboxes, get the row id and check in lists of selected and disconnect if the state should be changed
-		var $this = $(this).parent().parent();
-		if (typeof $this.attr('id') == 'undefined') {
-			$this = $this.parent().parent();
-		}
+		var $this = $(this).parents('.dataTables_wrapper:first').parent();
 		var id = $this.attr('id');
 		var settings = $.fn.eDataTables.settings[id];
 		var all_selected = $('#'+id+'-all-selected').data('select');
@@ -753,7 +679,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 		var list_disconnect = $('#'+id+'-disconnect').data('list');
 		var list_values = $('#'+id+'-values').data('list');
 		var base_values = $('#'+id+'-values').data('base');
-		
+
 		$('#'+id+' .'+settings.tableClass+' > tbody > tr > td >input.select-on-check').each(function(){
 			$(this).data('initValue', this.checked);
 			var row = $(this).parent().parent().index();
@@ -787,16 +713,11 @@ $.extend( $.fn.dataTableExt.oPagination, {
 				$(this).val(list_values[key][attr]);
 			}
 		});
-		$('#'+id+'-values').data('base', base_values); 
+		$('#'+id+'-values').data('base', base_values);
 		// call selectChecked
 		$.fn.eDataTables.selectCheckedRows(id);
 		if (typeof settings.fnDrawCallbackCustom != 'undefined') {
 			settings.fnDrawCallbackCustom(oSettings,id);
-		}
-
-		if (settings.bootstrap) { //reinitialize tooltips and popovers
-			$('a[rel=tooltip]').tooltip();
-			$('a[rel=popover]').popover();
 		}
 	};
 
@@ -910,7 +831,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 		input_disconnect.val(list_disconnect_serialized).data('list',list_disconnect);
 
 
-		
+
 
 		$('#' + id + ' .select-on-check-all').prop('indeterminate', $('#' + id).eDataTables('isSomeSelected'));
 		$('#' + id + ' .select-on-check-all').attr('checked', $('#' + id).eDataTables('isAllSelected'));
@@ -918,23 +839,16 @@ $.extend( $.fn.dataTableExt.oPagination, {
 	};
 
 
-	$.fn.eDataTables.buttonToHtml = function(button, bootstrap) {
+	$.fn.eDataTables.buttonToHtml = function(button) {
 		var htmlOptions = (typeof button.htmlOptions !== 'undefined' ? button.htmlOptions : {});
-		htmlOptions['class'] = button.htmlClass + ' ' + (typeof htmlOptions['class'] === 'undefined' ? '' : htmlOptions['class']) + (bootstrap ? ' btn' : '');
-		if (bootstrap) {
-			htmlOptions.rel = 'tooltip';
-			htmlOptions.title = button.label;
-		}
+		htmlOptions['class'] = button.htmlClass + ' ' + (typeof htmlOptions['class'] === 'undefined' ? '' : htmlOptions['class']);
+		htmlOptions['href'] = typeof button.url === 'undefined' ? '#' : button.url;
 
 		var htmlAttrs = '';
 		for (var i in htmlOptions) {
 			htmlAttrs += ' ' + i + '="' + htmlOptions[i] + '"';
 		}
-		if (bootstrap) {
-			return '<a ' + htmlAttrs + '><i class="' + button.icon + '"></i>' + (button.text ? button.label : '') + '</a>';
-		} else {
-			return '<button ' + htmlAttrs + '>'+button.label+'</button>';
-		}
+		return '<' + button.tagName + ' ' + htmlAttrs + '>' + button.label + '</' + button.tagName + '>';
 	}
-	
+
 })(jQuery);
