@@ -43,7 +43,7 @@ $this->pageTitle=Yii::app()->name;
                 
                         <ul class="button-group">                    
                          <li><a href="#" data-switch-rel="info" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-info"></i> Informazioni</a></li>
-                         <li><a href="#" data-switch-rel="export" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-download"></i> Esporta</a></li>
+                         <li><a href="#" data-target="#" data-switch-rel="export" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-download"></i> Esporta</a></li>
                          <li><a href="#" data-switch-rel="embed" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-code"></i> Incorpora</a></li>
                          <li><a href="#" class="button secondary tiny"><i class="icon-vector"></i> Altre Fonti</a></li>
                          <li><a href="#" class="button secondary tiny"><i class="icon-bubbles"></i> Discuti</a></li>
@@ -234,6 +234,7 @@ $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/datatables.min.js", CClientScript::POS_END);
 $cs->registerScriptFile('https://cdn.datatables.net/1.10.10/js/dataTables.foundation.min.js', CClientScript::POS_END);
 $cs->registerScriptFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/js/dataTables.scroller.min.js", CClientScript::POS_END);
+$cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/element-switcher/element-switcher.js',CClientScript::POS_END);
 $cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/datatables.min.css");
 $cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/css/scroller.foundation.min.css");
 $cs->registerCssFile('https://cdn.datatables.net/1.10.10/css/dataTables.foundation.min.css');
@@ -242,7 +243,6 @@ $cs->registerCssFile('https://cdn.datatables.net/1.10.10/css/dataTables.foundati
 $cs->registerScript('edatatables#',
         "
             var calcDataTableHeight = function() {
-            console.log($(window).height()-200);
        return $(window).height()-250+\"px\";
    };
    
