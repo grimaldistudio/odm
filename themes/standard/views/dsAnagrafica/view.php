@@ -241,17 +241,25 @@ $cs->registerCssFile('https://cdn.datatables.net/1.10.10/css/dataTables.foundati
 
 $cs->registerScript('edatatables#',
         "
+            var calcDataTableHeight = function() {
+            console.log($(window).height()-200);
+       return $(window).height()-250+\"px\";
+   };
+   
         $('#datatable table.display').DataTable({
         \"language\": {
                 \"url\": \"//cdn.datatables.net/plug-ins/1.10.10/i18n/Italian.json\"
             },             
-        \"info\":     false,
-        deferRender:    true,
-        scrollY:        '90vh',
-        scrollCollapse: true,
-        scroller:       true
+        info:       false,
+        paging :      false,
+        scrollY:    calcDataTableHeight(),
         }
         );
+        
+
+
+
+   
         "
         );
 
