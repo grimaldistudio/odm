@@ -28,9 +28,9 @@ class EDataColumn extends CDataColumn {
 			//parent::renderHeaderCellContent();
 	}
 
-	public function getDataCellContent($row,$data) {
+	public function getDataCellContent($row) {
 		ob_start();
-		$this->renderDataCellContent($row,$data);
+		$this->renderDataCellContent($row);
 		return ob_get_clean();
 	}
 }

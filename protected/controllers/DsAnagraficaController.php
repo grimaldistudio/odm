@@ -69,12 +69,13 @@ class DsAnagraficaController extends Controller
                      Yii::app()->end();
                    }
             
+                   /*
                    if ($embed == 1) :
                        $this->render('view_embed', array('model'=>$model,'dataProvider'=>$dataProvider));
                        else:
                        $this->render('view', array('model'=>$model,'dataProvider'=>$dataProvider));
                    endif;
-                                   
+                     */              
 		
 	}
         
