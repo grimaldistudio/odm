@@ -23,7 +23,6 @@ return array(
 	"Showing 0 to 0 of 0 entries" => "Wyświetlane 0 rekordów",
 	"Showing _START_ to _END_ of _TOTAL_ entries" => "Widoczne od <strong>_START_</strong> do <strong>_END_</strong> z <strong>_TOTAL_</strong> rekordów",
 	"Only related" => "Tylko powiązane",
-	"Columns" => "Kolumny",
 	"History" => "Historia zmian",
 	"Refresh" => "Odśwież",
 	"Configure" => "Konfiguruj",
@@ -34,5 +33,4 @@ return array(
 	'Deselect all' => 'Odznacz wszystkie',
 	'Select on page' => 'Zaznacz na stronie',
 	'Deselect on page' => 'Odznacz na stronie',
-	'Options fnServerParams and fnServerData are reserved and cannot be set. Use the serverParams and serverData properties instead.' => 'Opcje fnServerParams i fnServerData są zarezerwowane i nie mogą być ustawione. Zamiast nich, należy skorzystać z właściwości serverParams i serverData.',
 );
