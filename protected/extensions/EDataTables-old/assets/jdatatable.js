@@ -553,7 +553,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 				}
 				var button = $($.fn.eDataTables.buttonToHtml(settings.buttons[i], settings.bootstrap)).appendTo(toolbar);
 				if (!settings.bootstrap) {
-					button.button({icons: {primary:settings.buttons[i].icon}, text: settings.buttons[i].text});
+					//button.button({icons: {primary:settings.buttons[i].icon}, text: settings.buttons[i].text});
 				}
 				if (settings.buttons[i].callback == null) {
 					switch(i) {
