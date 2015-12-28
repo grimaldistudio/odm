@@ -63,8 +63,8 @@ $this->pageTitle=Yii::app()->name;
                 'htmlOptions' => array('id'=>'datatable'),
                  'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
                  'template' => '{items} {pager}',
-                    'itemsCssClass' => 'display compact',
-                'dataProvider'=>$dataProvider,
+                 'itemsCssClass' => 'display compact',
+                 'dataProvider'=>$dataProvider,
             ));
                       
             ?>
@@ -250,9 +250,18 @@ $cs->registerScript('edatatables#',
         \"language\": {
                 \"url\": \"//cdn.datatables.net/plug-ins/1.10.10/i18n/Italian.json\"
             },             
-        info:       false,
-        paging :      false,
+        info:       false,  
+        ajax:           '/dsAnagrafica/".$data['id']."',
+        dataSrc: 'data',      
+  
+        deferRender:    true,
+        scrollCollapse: true,
+        scroller:       true,
         scrollY:    calcDataTableHeight(),
+         scroller: {
+            loadingIndicator: true
+        },
+        
         }
         );
         

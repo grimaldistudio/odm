@@ -10,6 +10,9 @@ class DsAnagraficaController extends Controller
 	 */
 	public function actionView($id, $embed = null)
 	{
+            
+            $data['id'] = $id;
+            
             $sortableColumnNamesArray = Array();
             
              if ($embed == 1) $this->layout = 'embed';
@@ -36,13 +39,23 @@ class DsAnagraficaController extends Controller
             /*$pagination = new EDTPagination();*/
                                  
             $count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM '.$model->TAB)->queryScalar();            
-                   
+             
+            if ($embed == 1 || Yii::app()->getRequest()->getIsAjaxRequest()) :
             $sql = Yii::app()->db->createCommand()
                 ->select('*')
                 ->from($model->TAB) 
                 ->where($criteria->condition,  $criteria->params)
                 ->order($sort_by." ".$sort_dir);
-
+            else:
+                $sql = Yii::app()->db->createCommand()
+                ->select('*')
+                ->from($model->TAB) 
+                ->where($criteria->condition,  $criteria->params)
+                ->order($sort_by." ".$sort_dir)
+                ->limit(1);
+            
+            endif;
+                        
             $dataProvider=new CSqlDataProvider($sql, array(
                 'totalItemCount'=>$count,
                 'keyField' => 'CODICE',
@@ -59,25 +72,32 @@ class DsAnagraficaController extends Controller
                     'ajaxUrl'       => $this->createUrl('/dsanagrafica/view',array('id'=>$id)),
                     
                    ));
+                * 
+                */
                    if (!Yii::app()->getRequest()->getIsAjaxRequest()) {
                        if ($embed == 1) :
-                        $this->render('view_embed', array('widget' => $widget,'model'=>$model, 'dataProvider'=>$dataProvider ));
+                         $this->render('view_embed', array('model'=>$model,'dataProvider'=>$dataProvider));
                        else:
-                           $this->render('view', array('widget' => $widget,'model'=>$model, 'dataProvider'=>$dataProvider ));
+                           $this->render('view', array('model'=>$model,'dataProvider'=>$dataProvider,'data'=>$data));
                        endif;
                      return;
                    } else {
-                     echo json_encode($widget->getFormattedData(intval($_REQUEST['sEcho'])));
+                    // echo json_encode($widget->getFormattedData(intval($_REQUEST['sEcho'])));
+                    
+                        
+                     $data = $dataProvider->getData();
+                     foreach($data as $key=>$datarow) {
+                        foreach($datarow as $val ) {
+                            $dataRow['data'][$key][] = $val;
+                        }                    
+                     }
+                     
+                     echo CJSON::encode($dataRow);
                      Yii::app()->end();
                    }
-            */
+            
                    
-                   if ($embed == 1) :
-                       $this->render('view_embed', array('model'=>$model,'dataProvider'=>$dataProvider));
-                       else:
-                       $this->render('view', array('model'=>$model,'dataProvider'=>$dataProvider));
-                   endif;
-                                   
+                        
 		
 	}
         
