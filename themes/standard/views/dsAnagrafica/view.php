@@ -251,7 +251,7 @@ $cs->registerScript('edatatables#',
                 \"url\": \"//cdn.datatables.net/plug-ins/1.10.10/i18n/Italian.json\"
             },             
         info:       false,  
-        ajax:           '/dsAnagrafica/".$data['id']."',
+        ajax:           '".Yii::app()->getRequest()->getUrl()."',
         dataSrc: 'data',      
   
         deferRender:    true,
