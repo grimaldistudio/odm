@@ -60,7 +60,7 @@ $this->pageTitle=Yii::app()->name;
             <?php 
             
             $this->widget('zii.widgets.grid.CGridView', array(
-                'htmlOptions' => array('id'=>'datatable','style'=>'width:100%;'),
+                'htmlOptions' => array('id'=>'datatable'),
                  'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
                  'template' => '{items} {pager}',
                  'itemsCssClass' => 'display compact',
@@ -257,6 +257,7 @@ $cs->registerScript('edatatables#',
         scroller:       true,
         scrollY:    calcDataTableHeight(),
         scrollX: true,
+        autoWidth: false,
          scroller: {
             loadingIndicator: true
         },

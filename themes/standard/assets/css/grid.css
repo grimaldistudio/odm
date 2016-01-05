@@ -41,10 +41,10 @@ table.dataTable tr.odd, table.dataTable tr.alt, table.dataTable tr:nth-of-type(2
 }
 
 table.dataTable.compact thead tr th, table.dataTable.compact tfoot tr th, table.dataTable.compact tfoot tr td, table.dataTable.compact tbody tr th, table.dataTable.compact tbody tr td, table.dataTable.compact tr td {
-   line-height: 0.7rem;
+       line-height: 0.7rem;
        font-size: 0.70rem;
        padding: 0.4625rem 0.525rem;
-    color: #5E5E5E;
+       color: #5E5E5E;
 }
 
 .dataTables_toolbar {
@@ -63,9 +63,4 @@ div.dataTables_filter input{
 
 #DataTables_Table_0_wrapper > div.row {
     display:none;
-}
-
-#datatable{
-        width: 100%;
-        margin: 0 auto;
 }
