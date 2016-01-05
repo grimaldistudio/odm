@@ -930,6 +930,10 @@ span.date .month{
     color: #0171ba;
 }
 
+.switch-body-content {
+    overflow-y: auto; 
+}
+
 .accordion .accordion-navigation > a, .accordion dd > a {
     padding: 0.4rem 0.6rem;
     font-size: 0.8rem;

@@ -41,7 +41,7 @@ $this->pageTitle=Yii::app()->name;
                      
                       
                 
-                        <ul class="button-group">                    
+                        <ul class="button-group">                          
                          <li><a href="#" data-switch-rel="info" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-info"></i> Informazioni</a></li>
                          <li><a href="#" data-target="#" data-switch-rel="export" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-download"></i> Esporta</a></li>
                          <li><a href="#" data-switch-rel="embed" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-code"></i> Incorpora</a></li>
@@ -75,11 +75,12 @@ $this->pageTitle=Yii::app()->name;
             <!-- switch content -->
             <div class="switch-content " id="info">
                 <h3>Informazioni</h3>
-   
+                <div class="switch-body-content">
+                    
                 <div class="row collapse margin-top-10">
                     <div class="large-3 small-12 text-center columns">
                         <img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/simple-brand.png" alt="" />
-    </div>
+                    </div>
                     <div class="large-9 small-12 columns">
                         <strong>Roma Capitale</strong>
                         <ul class="no-bullet">
@@ -167,6 +168,7 @@ $this->pageTitle=Yii::app()->name;
                      <div class="large-12 columns"></div>
                  </div>
                 
+                </div>
             </div>
             <!-- /switch content -->
              <div class="switch-content hide" id="export">
@@ -226,6 +228,7 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </div>
     
+    <span style="display:none;" id="yiiGetUrl"><?php echo Yii::app()->getRequest()->getUrl();  ?></span>
 </section>
 
 <?php
@@ -235,15 +238,16 @@ $cs->registerScriptFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTa
 $cs->registerScriptFile('https://cdn.datatables.net/1.10.10/js/dataTables.foundation.min.js', CClientScript::POS_END);
 $cs->registerScriptFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/js/dataTables.scroller.min.js", CClientScript::POS_END);
 $cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/element-switcher/element-switcher.js',CClientScript::POS_END);
+$cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/js/app-dataset.js',CClientScript::POS_END);
 $cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/datatables.min.css");
 $cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/css/scroller.foundation.min.css");
 $cs->registerCssFile('https://cdn.datatables.net/1.10.10/css/dataTables.foundation.min.css');
 
-
+/*
 $cs->registerScript('edatatables#',
         "
             var calcDataTableHeight = function() {
-       return $(window).height()-250+\"px\";
+       return $(window).height()-250+\"px\";     
    };
    
         $('#datatable table.display').DataTable({
@@ -257,6 +261,7 @@ $cs->registerScript('edatatables#',
         scroller:       true,
         scrollY:    calcDataTableHeight(),
         scrollX: true,
+        ScrollXInner: true,
         autoWidth: true,
          scroller: {
             loadingIndicator: true
@@ -265,11 +270,11 @@ $cs->registerScript('edatatables#',
         }
         );
         
-
-
+  $('.switch-body-content').height(calcDataTableHeight());
+  $('#DataTables_Table_0').css('width','100%');
 
    
         "
         );
-
+*/
 ?>
