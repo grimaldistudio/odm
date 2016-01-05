@@ -253,11 +253,10 @@ $cs->registerScript('edatatables#',
         info:       false,  
         ajax:           '".Yii::app()->getRequest()->getUrl()."',
         dataSrc: 'data',      
-  
         deferRender:    true,
-        scrollCollapse: true,
         scroller:       true,
         scrollY:    calcDataTableHeight(),
+        scrollX: true,
          scroller: {
             loadingIndicator: true
         },
