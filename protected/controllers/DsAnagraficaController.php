@@ -87,9 +87,8 @@ class DsAnagraficaController extends Controller
                         
                      $data = $dataProvider->getData();
                      foreach($data as $key=>$datarow) {
-                        foreach($datarow as $val ) {
-                            if(!empty($val))
-                            $dataRow['data'][$key][] = $val;
+                        foreach($datarow as $val ) {                      
+                            $dataRow['data'][$key][] = (string)($val);
                         }                    
                      }
                      
