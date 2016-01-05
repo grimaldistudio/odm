@@ -60,3 +60,12 @@ table.dataTable.compact thead tr th, table.dataTable.compact tfoot tr th, table.
 div.dataTables_filter input{
     height: 34px !important;
 }
+
+#DataTables_Table_0_wrapper > div.row {
+    display:none;
+}
+
+#datatable{
+        width: 100%;
+        margin: 0 auto;
+}

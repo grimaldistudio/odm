@@ -60,7 +60,7 @@ $this->pageTitle=Yii::app()->name;
             <?php 
             
             $this->widget('zii.widgets.grid.CGridView', array(
-                'htmlOptions' => array('id'=>'datatable'),
+                'htmlOptions' => array('id'=>'datatable','style'=>'width:100%;'),
                  'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
                  'template' => '{items} {pager}',
                  'itemsCssClass' => 'display compact',
