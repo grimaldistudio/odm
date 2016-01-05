@@ -257,7 +257,7 @@ $cs->registerScript('edatatables#',
         scroller:       true,
         scrollY:    calcDataTableHeight(),
         scrollX: true,
-        autoWidth: false,
+        autoWidth: true,
          scroller: {
             loadingIndicator: true
         },
