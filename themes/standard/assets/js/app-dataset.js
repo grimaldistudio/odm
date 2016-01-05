@@ -14,7 +14,7 @@ var calcDataTableHeight = function() {
         scrollY:    calcDataTableHeight(),
         scrollX: true,
         ScrollXInner: true,
-        autoWidth: true,
+        autoWidth: false,
          scroller: {
             loadingIndicator: true
         },
