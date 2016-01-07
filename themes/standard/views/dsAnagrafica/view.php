@@ -41,7 +41,8 @@ $this->pageTitle=Yii::app()->name;
                      
                       
                 
-                        <ul class="button-group">                          
+                        <ul class="button-group"> 
+                            <li><input type="search" class="" placeholder="Cerca nel dataset" id="opendatasearch" aria-controls="DataTables_Table_0" /></li>
                          <li><a href="#" data-switch-rel="info" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-info"></i> Informazioni</a></li>
                          <li><a href="#" data-target="#" data-switch-rel="export" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-download"></i> Esporta</a></li>
                          <li><a href="#" data-switch-rel="embed" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-code"></i> Incorpora</a></li>
@@ -57,6 +58,7 @@ $this->pageTitle=Yii::app()->name;
     
     <div class="row-fluid large-collapse margin-top-10">
         <div class="large-9 columns">
+            <div style="width:100%;">
             <?php 
             
             $this->widget('zii.widgets.grid.CGridView', array(
@@ -68,7 +70,7 @@ $this->pageTitle=Yii::app()->name;
             ));
                       
             ?>
-            
+            </div>
         </div>
         
         <div class="large-3 columns">
@@ -114,7 +116,13 @@ $this->pageTitle=Yii::app()->name;
                           <h4><i class="fi-list"></i>Attività</h4>
                           <ul class="no-bullet background-white list-simple">
                               <li>Comunità <span class="right"><i class="fi-star blu"></i> <i class="fi-star blu"></i> <i class="fi-star gray"></i> <i class="fi-star gray"></i> <i class="fi-star gray"></i></span></li>
-                              <li>La tua valutazione <span class="right"><i class="fi-star blu"></i> <i class="fi-star blu"></i> <i class="fi-star blu"></i> <i class="fi-star gray"></i> <i class="fi-star gray"></i></span></li>
+                              <li>La tua valutazione 
+                                  <?php
+                                      $this->widget('ext.DzRaty.DzRaty', array(
+                                        	'name' => 'my_rating_field',
+                                                'value' => 3,
+                                    )); ?>
+                                  <span class="right"><i class="fi-star blu"></i> <i class="fi-star blu"></i> <i class="fi-star blu"></i> <i class="fi-star gray"></i> <i class="fi-star gray"></i></span></li>
                               <li>Votanti <span class="right">34</span></li>
                               <li>Visite <span class="right">1123</span></li>
                               <li>Download <span class="right">12</span></li>
@@ -243,38 +251,5 @@ $cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTable
 $cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/css/scroller.foundation.min.css");
 $cs->registerCssFile('https://cdn.datatables.net/1.10.10/css/dataTables.foundation.min.css');
 
-/*
-$cs->registerScript('edatatables#',
-        "
-            var calcDataTableHeight = function() {
-       return $(window).height()-250+\"px\";     
-   };
-   
-        $('#datatable table.display').DataTable({
-        \"language\": {
-                \"url\": \"//cdn.datatables.net/plug-ins/1.10.10/i18n/Italian.json\"
-            },             
-        info:       false,  
-        ajax:           '".Yii::app()->getRequest()->getUrl()."',
-        dataSrc: 'data',      
-        deferRender:    true,
-        scroller:       true,
-        scrollY:    calcDataTableHeight(),
-        scrollX: true,
-        ScrollXInner: true,
-        autoWidth: true,
-         scroller: {
-            loadingIndicator: true
-        },
-        
-        }
-        );
-        
-  $('.switch-body-content').height(calcDataTableHeight());
-  $('#DataTables_Table_0').css('width','100%');
 
-   
-        "
-        );
-*/
 ?>

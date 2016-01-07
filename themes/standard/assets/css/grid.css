@@ -56,10 +56,13 @@ table.dataTable.compact thead tr th, table.dataTable.compact tfoot tr th, table.
     top:-42px;
 }
 
-div.dataTables_filter input{
+div.dataTables_filter input, #opendatasearch{
     height: 34px !important;
+    width: 280px;
+    margin:0 10px -12px 0;    
 }
 
-#DataTables_Table_0_wrapper > div.row .dataTables_length {
+#DataTables_Table_0_wrapper > div.row {
     display:none;
 }
+

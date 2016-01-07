@@ -87,8 +87,9 @@ class DsAnagraficaController extends Controller
                         
                      $data = $dataProvider->getData();
                      foreach($data as $key=>$datarow) {
-                        foreach($datarow as $val ) {                      
-                            $dataRow['data'][$key][] = (string)($val);
+                        foreach($datarow as $val ) {                            
+                            $dataRow['data'][$key][] = utf8_encode((string)($val));                            
+                            
                         }                    
                      }
                      
