@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-   $("table.display").attr('width','100%;');
+   $("table.display").attr('width','98%;');
    
      
  
