@@ -107,8 +107,9 @@ class ShortUrl extends CApplicationComponent
 
 		// decode and return the JSON response
 		$json = json_decode($result, true);
+                var_dump($json);
 		//return short link if available or false
-		return $json['id'] ? $json['id'] : false;
+		//return $json['id'] ? $json['id'] : false;
 	}
 
 }
