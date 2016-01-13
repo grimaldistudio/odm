@@ -178,7 +178,7 @@ $this->pageTitle=Yii::app()->name;
                           <h4><i class="fi-link"></i>Link</h4>
                           <ul class="no-bullet background-white list-simple">
                               <li>Permalink <span class="right"><?php echo Yii::app()->request->hostInfo . Yii::app()->request->url; ?></span></li>
-                              <li>Url breve<span class="right"><?php Yii::app()->shorturl->short(Yii::app()->request->hostInfo . Yii::app()->request->url); ?></span></li>                                                     
+                              <li>Url breve<span class="right"><?php echo Yii::app()->shorturl->short(Yii::app()->request->hostInfo . Yii::app()->request->url); ?></span></li>                                                     
                           </ul>
                       </div>
                  </div>
