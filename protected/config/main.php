@@ -97,7 +97,7 @@ return array(
 		),
             
             'shorturl' => array(
-                'class' => 'ext.shorturl.ShortUrl',
+                'class' => 'ext.ShortUrl.ShortUrl',
                 'apiKey' => 'AIzaSyCtnmzqMLLpH6rzEm6s43d660mzgBxImKc', // apikey
             ),
 	),
