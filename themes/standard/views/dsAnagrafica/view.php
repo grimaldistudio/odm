@@ -116,8 +116,10 @@ $this->pageTitle=Yii::app()->name;
                           <h4><i class="fi-list"></i>Attività</h4>
                           <ul class="no-bullet background-white list-simple">
                               <?php 
+                              if($data['modelstats']->voters > 0) {
                               $comunity_rating = round($data['modelstats']->rating/$data['modelstats']->voters);
                               $comunity_rating_star = $comunity_rating/2;
+                              }
                               ?>
                               <li>Comunità <span class="right">
                                       <?php
