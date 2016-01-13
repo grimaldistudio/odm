@@ -9,10 +9,26 @@ class DsAnagraficaController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id, $embed = null)
-	{
+	{ 
+            $data = array();
             
-            $data['id'] = $id;
+            //stats init
+            $model_stats = new Stats();
+            if(!($model_stats_load = Stats::model()->findByAttributes(array('dsanagrafica_codice' => $id) ) )) {
+                    $model_stats->dsanagrafica_codice = $id;                    
+                    $model_stats->save ();
+                    $data['modelstats'] = $model_stats;
+            }else{
+                if (!Yii::app()->getRequest()->getIsAjaxRequest()) {
+                    $model_stats_load->views++;
+                    $model_stats_load->save();
+                    $data['modelstats'] = $model_stats_load;
+                }                    
+            }
+            //stats end
             
+            $data['id'] = $id;            
+                    
             $sortableColumnNamesArray = Array();
             
              if ($embed == 1) $this->layout = 'embed';
@@ -78,7 +94,7 @@ class DsAnagraficaController extends Controller
                        if ($embed == 1) :
                          $this->render('view_embed', array('model'=>$model,'dataProvider'=>$dataProvider));
                        else:
-                           $this->render('view', array('model'=>$model,'dataProvider'=>$dataProvider,'data'=>$data));
+                           $this->render('view', array('model'=>$model,'data'=>$data,'dataProvider'=>$dataProvider,'data'=>$data));
                        endif;
                      return;
                    } else {

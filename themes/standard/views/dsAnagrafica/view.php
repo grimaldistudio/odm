@@ -90,7 +90,7 @@ $this->pageTitle=Yii::app()->name;
                             <li>RESPONSABILE: <strong><?php echo $model->LEG_UT; ?></strong></li>
                             <li>CREATO IL: <strong><?php echo date('d.m.Y',strtotime($model->D_CRE));?></strong></li>
                             <li>AGGIORNATO IL: <strong><?php echo date('d.m.Y',strtotime($model->D_AGG));?></strong></li>
-                            <li>OPENESS RATING: <strong>3/5</strong></li>
+                            <li>OPENESS RATING: <img src="http://lab.linkeddata.deri.ie/2010/lod-badges/img/data-badge-4.png" alt="four star open Web data" /></li>
                         </ul>
                     </div>
                 </div>
@@ -115,16 +115,44 @@ $this->pageTitle=Yii::app()->name;
                       <div class="large-12 columns">
                           <h4><i class="fi-list"></i>Attività</h4>
                           <ul class="no-bullet background-white list-simple">
-                              <li>Comunità <span class="right"><i class="fi-star blu"></i> <i class="fi-star blu"></i> <i class="fi-star gray"></i> <i class="fi-star gray"></i> <i class="fi-star gray"></i></span></li>
+                              <?php 
+                              $comunity_rating = round($data['modelstats']->rating/$data['modelstats']->voters);
+                              $comunity_rating_star = $comunity_rating/2;
+                              ?>
+                              <li>Comunità <span class="right">
+                                      <?php
+                                            $this->widget('CStarRating',array(
+                                                        'name'=>'star_rating_comunity',
+                                                        'value'=>$comunity_rating_star,
+                                                        'readOnly'=>true,
+                                                        ));
+                                            ?>
+                                     </span>
+                              </li>
                               <li>La tua valutazione 
+                                  <span class="right">
                                   <?php
-                                      $this->widget('ext.DzRaty.DzRaty', array(
-                                        	'name' => 'my_rating_field',
-                                                'value' => 3,
-                                    )); ?>
-                                  <span class="right"><i class="fi-star blu"></i> <i class="fi-star blu"></i> <i class="fi-star blu"></i> <i class="fi-star gray"></i> <i class="fi-star gray"></i></span></li>
-                              <li>Votanti <span class="right">34</span></li>
-                              <li>Visite <span class="right">1123</span></li>
+                                    $this->widget('CStarRating',array(
+                                        'name'=>'star_rating_ajax',
+                                       'maxRating'=>5,
+                                        'callback'=>'
+                                            function(){
+                                                    $.ajax({
+                                                        type: "POST",
+                                                        url: "'.Yii::app()->createUrl('stats/rating').'",
+                                                        data: "codice='.$model->CODICE.'&star_rating=" + $(this).val(),
+                                                        success: function(data){
+                                                                    $("#mystar_voting").html(data);
+                                                                    $("#stats_voters").text( parseInt($("#stats_voters").text())+1 );
+                                                            }})}'
+                                      ));
+                                    echo "<br/>";
+                                    echo "<div id='mystar_voting'></div>";
+                                    ?>
+                                  </span>
+                                 </li>
+                              <li>Votanti <span class="right" id="stats_voters"><?php echo $data['modelstats']->voters; ?></span></li>
+                              <li>Visite <span class="right"><?php echo $data['modelstats']->views; ?></span></li>
                               <li>Download <span class="right">12</span></li>
                               <li>Commenti <span class="right">0</span></li>
                           </ul>
@@ -146,8 +174,8 @@ $this->pageTitle=Yii::app()->name;
                       <div class="large-12 columns">
                           <h4><i class="fi-link"></i>Link</h4>
                           <ul class="no-bullet background-white list-simple">
-                              <li>Permalink <span class="right">http://zzzz</span></li>
-                              <li>Url breve<span class="right">http://goo.gl/YEhdD</span></li>                                                     
+                              <li>Permalink <span class="right"><?php echo Yii::app()->request->hostInfo . Yii::app()->request->url; ?></span></li>
+                              <li>Url breve<span class="right"><?php Yii::app()->shorturl->short(Yii::app()->request->hostInfo . Yii::app()->request->url); ?></span></li>                                                     
                           </ul>
                       </div>
                  </div>

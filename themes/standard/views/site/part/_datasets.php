@@ -38,9 +38,10 @@
             </ul>
 
             <p><?php echo $data->DESCRIZIONE;?></p>
-            <div class="dataset-share">
+            <div class="dataset-share">                             
+                
                 <ul class="no-bullet inline-list">
-                    <li><span><i class="icon-fire icons"></i> 147</span></li>
+                    <li><span id="stats_<?php echo $data->CODICE;?>"> </span></li>
                     <li><a href="#" class="toggleFunction"><span><i class="icon-share icons"></i> </span></a></li>
                     <div style="display: none;">
                         <?php $this->widget('application.extensions.sharebox.EShareBox', array(
@@ -80,6 +81,19 @@
                             )); ?>
                     </div>
                 </ul>
+                <script language="javascript" type="text/javascript">
+
+                   <?php
+                echo CHtml::ajax(array(
+                'id'=>'stats_view_'.$data->CODICE,
+                'type'=>'GET',
+                'url'=>CController::createUrl('stats/view'),
+                'update'=>'#stats_'.$data->CODICE,
+                'data'=>'codice='.$data->CODICE,
+                 ));
+                ?>
+                </script>
+                
             </div>
         </div>
 

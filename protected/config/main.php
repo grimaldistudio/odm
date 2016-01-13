@@ -95,6 +95,11 @@ return array(
 				*/
 			),
 		),
+            
+            'shorturl' => array(
+                'class' => 'ext.shorturl.ShortUrl',
+                'apiKey' => 'AIzaSyCtnmzqMLLpH6rzEm6s43d660mzgBxImKc', // apikey
+            ),
 	),
 
 	// application-level parameters that can be accessed
