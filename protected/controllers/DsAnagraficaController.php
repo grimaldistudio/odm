@@ -3,6 +3,22 @@
 class DsAnagraficaController extends Controller
 {
 
+        public function filters()
+        {
+                return array(                 
+                    array(
+                        'RestfullYii.filters.ERestFilter + 
+                        REST.GET, REST.PUT, REST.POST, REST.DELETE, REST.OPTIONS'
+                    ),
+                );
+        }
+
+        public function actions()
+        {
+                return array(
+                    'REST.'=>'RestfullYii.actions.ERestActionProvider',
+                );
+        }   
 
 	/**
 	 * Displays a particular model.

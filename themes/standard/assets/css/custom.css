@@ -919,8 +919,16 @@ span.date .month{
     padding-bottom:0;
 }
 
-.switch-content .list-simple li span {
+.switch-content .list-simple li > span {
     color: #464646;
+   max-width: 60%;
+    width: auto;
+    text-align: right;
+}
+
+.switch-content .list-simple li span.star-rating-control {
+    text-align: left;
+    float:right;
 }
 
 .switch-content .list-simple i.gray {

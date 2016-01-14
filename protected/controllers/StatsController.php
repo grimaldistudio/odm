@@ -80,6 +80,20 @@ class StatsController extends Controller
                     echo 0;
                 }
 	}
+        
+        public function actionDownloadAdd()
+	{		
+		
+		if(isset($_POST['codice']))
+		{
+                        $model=Stats::model()->findByAttributes(array('dsanagrafica_codice'=>$_POST['codice']));
+			$model->downloads++;
+                        $model->save();
+                                echo $model->downloads;
+		}else{
+                    echo 0;
+                }
+	}
 
 	/**
 	 * Deletes a particular model.

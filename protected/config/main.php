@@ -55,12 +55,9 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
                         'showScriptName'=>false,
-			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-                                '<controller:\w+>/<id:\d+>/<embed>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-			),
+			'rules' => require(
+                            dirname(__FILE__).'/../extensions/starship/RestfullYii/config/routes.php'
+                    ),
 		),
 		
 		'db'=>array(
@@ -112,4 +109,7 @@ return array(
                 'noreplyEmail'=> 'noreply@opendatamanager.it'
                
 	),
+    'aliases' => array(
+        'RestfullYii' =>realpath(__DIR__ . '/../extensions/starship/RestfullYii'),       
+    ),
 );

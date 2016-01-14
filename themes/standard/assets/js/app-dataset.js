@@ -5,7 +5,7 @@ $(document).ready(function(){
      
  
 var calcDataTableHeight = function() {
-       return $(window).height()-290+"px";     
+       return $(window).height()-290;            
    };
    
      var table = $('#datatable table.display').DataTable({
@@ -17,7 +17,7 @@ var calcDataTableHeight = function() {
         dataSrc: 'data',      
         deferRender:    true,
         scroller:       true,
-        scrollY:    calcDataTableHeight(),
+        scrollY:    true,
         scrollX: true,
         autoWidth: true,  
         scrollCollapse: true
@@ -28,12 +28,12 @@ var calcDataTableHeight = function() {
  
 
 table.on( 'init', function () {
- 
+   $(".dataTables_scroll, .dataTables_scrollBody").height(calcDataTableHeight()+"px");
 } );
 
 
-  $('.switch-body-content').height(calcDataTableHeight());
-  
+  $('.switch-body-content').height(calcDataTableHeight()+"px");
+
 $('#opendatasearch').on( 'keyup', function () {
     table.search( this.value ).draw();
 } );
@@ -42,6 +42,19 @@ $('#opendatasearch').on( 'keyup', function () {
   var e = $(window).width()-l;
   $('.dataTables_filter').css('right',-l+l);
   
+  
+  //download counter
+  $(".stats-download").on( 'click', function () {
+      $.ajax({
+            method: "POST",
+            url: "/stats/downloadadd",
+            data: { codice: $(this).attr('codice') }
+          })
+            .done(function( msg ) {
+              $( "#stats_downloads").text( msg );
+            });
+      
+  });
   
   });
   

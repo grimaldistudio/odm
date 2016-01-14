@@ -27,9 +27,15 @@ $this->pageTitle=Yii::app()->name;
     <div class="row-fluid large-collapse margin-top-10">
         
         <div class="large-12 columns">
-            <?php 
+             <?php 
             
-            $widget->run(); 
+            $this->widget('zii.widgets.grid.CGridView', array(
+                'htmlOptions' => array('id'=>'datatable'),
+                 'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
+                 'template' => '{items} {pager}',
+                 'itemsCssClass' => 'display compact',
+                 'dataProvider'=>$dataProvider,
+            ));
                       
             ?>
             
@@ -37,14 +43,19 @@ $this->pageTitle=Yii::app()->name;
         
    
     </div>
-    
+     <span style="display:none;" id="yiiGetUrl"><?php echo Yii::app()->getRequest()->getUrl();  ?></span>
 </section>
-
 <?php
-//cdn.datatables.net/plug-ins/1.10.7/integration/foundation/dataTables.foundation.css
-//cdn.datatables.net/plug-ins/1.10.7/integration/foundation/dataTables.foundation.js
 $cs = Yii::app()->getClientScript();
-$cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/datatables-plugins/integration/foundation/dataTables.foundation.min.js',CClientScript::POS_END);
+
+$cs->registerScriptFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/datatables.min.js", CClientScript::POS_END);
+$cs->registerScriptFile('https://cdn.datatables.net/1.10.10/js/dataTables.foundation.min.js', CClientScript::POS_END);
+$cs->registerScriptFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/js/dataTables.scroller.min.js", CClientScript::POS_END);
 $cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/element-switcher/element-switcher.js',CClientScript::POS_END);
-$cs->registerCssFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/datatables-plugins/integration/foundation/dataTables.foundation.css');
+$cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/js/app-dataset.js',CClientScript::POS_END);
+$cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/datatables.min.css");
+$cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/css/scroller.foundation.min.css");
+$cs->registerCssFile('https://cdn.datatables.net/1.10.10/css/dataTables.foundation.min.css');
+
+
 ?>

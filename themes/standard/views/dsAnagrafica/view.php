@@ -116,10 +116,10 @@ $this->pageTitle=Yii::app()->name;
                           <h4><i class="fi-list"></i>Attività</h4>
                           <ul class="no-bullet background-white list-simple">
                               <?php 
-                              $comunity_rating_star = 0;
+                              $comunity_rating_star = 0;                             
                               if($data['modelstats']->voters > 0) {
                               $comunity_rating = round($data['modelstats']->rating/$data['modelstats']->voters);
-                              $comunity_rating_star = $comunity_rating/2;
+                              $comunity_rating_star = round($comunity_rating/2);                           
                               }
                               ?>
                               <li>Comunità <span class="right">
@@ -127,7 +127,7 @@ $this->pageTitle=Yii::app()->name;
                                             $this->widget('CStarRating',array(
                                                         'name'=>'star_rating_comunity',
                                                         'value'=>$comunity_rating_star,
-                                                        'readOnly'=>true,
+                                                        'readOnly'=>true,                                                        
                                                         ));
                                             ?>
                                      </span>
@@ -138,6 +138,7 @@ $this->pageTitle=Yii::app()->name;
                                     $this->widget('CStarRating',array(
                                         'name'=>'star_rating_ajax',
                                        'maxRating'=>5,
+                                        'allowEmpty'=>false,
                                         'callback'=>'
                                             function(){
                                                     $.ajax({
@@ -156,7 +157,7 @@ $this->pageTitle=Yii::app()->name;
                                  </li>
                               <li>Votanti <span class="right" id="stats_voters"><?php echo $data['modelstats']->voters; ?></span></li>
                               <li>Visite <span class="right"><?php echo $data['modelstats']->views; ?></span></li>
-                              <li>Download <span class="right">12</span></li>
+                              <li>Download <span class="right" id="stats_downloads"><?php echo $data['modelstats']->downloads; ?></span></li>
                               <li>Commenti <span class="right">0</span></li>
                           </ul>
                       </div>
@@ -177,7 +178,7 @@ $this->pageTitle=Yii::app()->name;
                       <div class="large-12 columns">
                           <h4><i class="fi-link"></i>Link</h4>
                           <ul class="no-bullet background-white list-simple">
-                              <li>Permalink <span class="right"><?php echo Yii::app()->request->hostInfo . Yii::app()->request->url; ?></span></li>
+                              <li>Permalink <span class="right"><?php echo CHtml::link(Yii::app()->request->hostInfo . Yii::app()->request->url); ?></span></li>
                               <li>Url breve<span class="right"><?php echo Yii::app()->shorturl->short(Yii::app()->request->hostInfo . Yii::app()->request->url); ?></span></li>                                                     
                           </ul>
                       </div>
@@ -218,14 +219,14 @@ $this->pageTitle=Yii::app()->name;
                           <div id="panel1a" class="content active">
                               Il dataset è disponibile nei seguenti formati <br /><br />
                                 <ul class="no-bullet list-simple-min">
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=csv&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> CSV</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xls&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> XLS</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xlsx&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> XLSX</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=sql&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> SQL</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xml&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> XML</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=rdf&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> RDF</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=json&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> JSON</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=struttura&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary"><i class="icon-download"></i> STRUTTURA</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=csv&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> CSV</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xls&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> XLS</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xlsx&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> XLSX</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=sql&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> SQL</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xml&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> XML</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=rdf&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> RDF</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=json&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> JSON</a></li>
+                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=struttura&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> STRUTTURA</a></li>
                                 </ul>
                           </div>
                         </li>
@@ -256,7 +257,7 @@ $this->pageTitle=Yii::app()->name;
                              
                              <label for="embed_odm_code">Incorpora questo dataset</label>
                                
-                             <textarea name="embed_odm_code" rows="10"><div><iframe width="500px" title="<?php echo $model->TITOLO; ?>" height="425px" src="#" frameborder="0"scrolling="no"><a href="" title="<?php echo $model->TITOLO; ?>" target="_blank"><?php echo $model->TITOLO; ?></a></iframe></div></textarea>
+                             <textarea name="embed_odm_code" rows="10"><div><iframe width="500px" title="<?php echo $model->TITOLO; ?>" height="425px" src="<?php echo Yii::app()->request->hostInfo . Yii::app()->request->url . "?embed=1"; ?>" frameborder="0"scrolling="no"><a href="" title="<?php echo $model->TITOLO; ?>" target="_blank"><?php echo $model->TITOLO; ?></a></iframe></div></textarea>
                                 
                           </div>
                         </li>
