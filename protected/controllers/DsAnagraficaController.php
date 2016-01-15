@@ -3,6 +3,7 @@
 class DsAnagraficaController extends Controller
 {
 
+    
         public function filters()
         {
                 return array(                 
@@ -19,6 +20,8 @@ class DsAnagraficaController extends Controller
                     'REST.'=>'RestfullYii.actions.ERestActionProvider',
                 );
         }   
+        
+       
 
 	/**
 	 * Displays a particular model.

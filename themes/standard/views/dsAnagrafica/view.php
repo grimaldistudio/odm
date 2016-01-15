@@ -218,22 +218,26 @@ $this->pageTitle=Yii::app()->name;
                           <a href="#panel1a">Scarica</a>
                           <div id="panel1a" class="content active">
                               Il dataset è disponibile nei seguenti formati <br /><br />
-                                <ul class="no-bullet list-simple-min">
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=csv&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> CSV</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xls&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> XLS</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xlsx&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> XLSX</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=sql&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> SQL</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=xml&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> XML</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=rdf&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> RDF</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=json&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> JSON</a></li>
-                                    <li><a href="http://130.211.179.228/odm/export/export.php?tipo=struttura&idTab=<?php echo $model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> STRUTTURA</a></li>
+                                <ul class="no-bullet list-simple-min background-white">
+                                    <li><a href="<?php echo Yii::app()->request->hostInfo."/odm/export/export.php?tipo=csv&idTab=".$model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> CSV</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->hostInfo."/odm/export/export.php?tipo=xls&idTab=".$model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> XLS</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->hostInfo."/odm/export/export.php?tipo=xlsx&idTab=".$model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> XLSX</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->hostInfo."/odm/export/export.php?tipo=sql&idTab=".$model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> SQL</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->hostInfo."/odm/export/export.php?tipo=xml&idTab=".$model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> XML</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->hostInfo."/odm/export/export.php?tipo=rdf&idTab=".$model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> RDF</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->hostInfo."/odm/export/export.php?tipo=json&idTab=".$model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> JSON</a></li>
+                                    <li><a href="<?php echo Yii::app()->request->hostInfo."/odm/export/export.php?tipo=struttura&idTab=".$model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> STRUTTURA</a></li>
                                 </ul>
                           </div>
                         </li>
                         <li class="accordion-navigation">
                           <a href="#panel2a">RESTFull API</a>
                           <div id="panel2a" class="content">
-                              In allestimento
+                             <p><i class="fi-paint-bucket"></i> Accedi a questo dataset tramite l'endpoint RESTful</p>
+                             <p><br />API Endpoint:</p>
+                             <p class="background-white"><?php echo CHtml::link(Yii::app()->request->hostInfo . "/api".Yii::app()->request->url); ?></p>
+                             <p><br />Istruzioni:</p>
+                             <p class="background-white">In allestimento</p>
                            </div>
                         </li>
                         <li class="accordion-navigation">

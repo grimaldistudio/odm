@@ -267,7 +267,10 @@ ul, ol, dl {
     padding-right: 30px;
 }
 
-
+.accordion .accordion-navigation > .content.active, .accordion dd > .content.active {
+    background: transparent;
+    color: #333333;
+}
 /*-----------------------------------*/
 /* HEADER
 /*-----------------------------------*/
@@ -872,7 +875,8 @@ span.date .month{
 }
 
 .switch-content, .switch-content ul, .switch-content p   {
-    color: #888888;
+   /* color: #888888;*/
+   color: #333333;
     font-family: "Montserrat",sans-serif;
 }
 
@@ -889,7 +893,7 @@ span.date .month{
 
 .switch-content h4{   
     color: #464646;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     margin:0 0 10px 0;
     font-weight: normal;
 }
@@ -942,6 +946,10 @@ span.date .month{
     overflow-y: auto; 
 }
 
+.switch-body-content p,  .accordion p{
+    font-size: 12px;
+}
+
 .accordion .accordion-navigation > a, .accordion dd > a {
     padding: 0.4rem 0.6rem;
     font-size: 0.8rem;
@@ -949,7 +957,6 @@ span.date .month{
     margin-bottom: 4px;
     border-bottom: 1px solid #e8e8e8;
 }
-
 
 /*-----------------------------------*/
 /* SOCIAL

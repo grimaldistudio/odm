@@ -98,18 +98,27 @@ return array(
                 'apiKey' => 'AIzaSyCtnmzqMLLpH6rzEm6s43d660mzgBxImKc', // apikey
             ),
 	),
-
+    'aliases' => array(
+           'RestfullYii' =>realpath(__DIR__ . '/../extensions/starship/RestfullYii'),       
+       ),
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
-	'params'=>array(
+    
+                    
+	'params'=>[
+        'RestfullYii' => [
+            'req.auth.user'=>function($application_id, $username, $password) {
+                return true;
+            },
+        ]
+    ,array(
 		'adminEmail'=>'info@opendatamanager.it',
                 'version' => '0.1',
                 'copyright' => 'Roma Capitale',
                 'logoText' => 'ODM',
-                'noreplyEmail'=> 'noreply@opendatamanager.it'
+                'noreplyEmail'=> 'noreply@opendatamanager.it',           
                
 	),
-    'aliases' => array(
-        'RestfullYii' =>realpath(__DIR__ . '/../extensions/starship/RestfullYii'),       
-    ),
+   
+                    ]
 );
