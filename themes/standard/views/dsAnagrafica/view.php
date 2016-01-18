@@ -47,7 +47,7 @@ $this->pageTitle=Yii::app()->name;
                          <li><a href="#" data-target="#" data-switch-rel="export" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-download"></i> Esporta</a></li>
                          <li><a href="#" data-switch-rel="embed" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-code"></i> Incorpora</a></li>
                          <li><a href="#" class="button secondary tiny"><i class="icon-vector"></i> Altre Fonti</a></li>
-                         <li><a href="#" class="button secondary tiny"><i class="icon-bubbles"></i> Discuti</a></li>
+                         <li><a href="#" data-switch-rel="disqus" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-bubbles"></i> Discuti</a></li>
                        </ul>
                      
                      
@@ -263,6 +263,37 @@ $this->pageTitle=Yii::app()->name;
                                
                              <textarea name="embed_odm_code" rows="10"><div><iframe width="500px" title="<?php echo $model->TITOLO; ?>" height="425px" src="<?php echo Yii::app()->request->hostInfo . Yii::app()->request->url . "?embed=1"; ?>" frameborder="0"scrolling="no"><a href="" title="<?php echo $model->TITOLO; ?>" target="_blank"><?php echo $model->TITOLO; ?></a></iframe></div></textarea>
                                 
+                          </div>
+                        </li>
+                        
+                      </ul>
+            </div>
+              
+                 <!-- /disqus content -->
+             <div class="switch-content hide" id="disqus">
+                 <h3>Discuti</h3>
+                    <ul class="accordion" data-accordion>
+                        <li class="accordion-navigation">
+                         
+                          <div id="panel1a" class="content active">                             
+                            <div id="disqus_thread"></div>
+                                            <script>
+                                           
+                                            var disqus_config = function () {
+                                            this.page.url = <?php echo Yii::app()->request->hostInfo . Yii::app()->request->url; ?> 
+                                            //this.page.identifier = PAGE_IDENTIFIER; 
+                                            };
+                                            
+                                            (function() {
+                                            var d = document, s = d.createElement('script');
+
+                                            s.src = '//opendatamanager.disqus.com/embed.js';
+
+                                            s.setAttribute('data-timestamp', +new Date());
+                                            (d.head || d.body).appendChild(s);
+                                            })();
+                                            </script>
+                                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
                           </div>
                         </li>
                         
