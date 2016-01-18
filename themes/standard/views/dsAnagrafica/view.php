@@ -158,7 +158,7 @@ $this->pageTitle=Yii::app()->name;
                               <li>Votanti <span class="right" id="stats_voters"><?php echo $data['modelstats']->voters; ?></span></li>
                               <li>Visite <span class="right"><?php echo $data['modelstats']->views; ?></span></li>
                               <li>Download <span class="right" id="stats_downloads"><?php echo $data['modelstats']->downloads; ?></span></li>
-                              <li>Commenti <span class="right">0</span></li>
+                              <li>Commenti <span class="right disqus-comment-count" data-disqus-url="<?php echo Yii::app()->request->hostInfo . Yii::app()->request->url; ?>" ></span></li>
                           </ul>
                       </div>
                  </div>
@@ -280,7 +280,7 @@ $this->pageTitle=Yii::app()->name;
                                             <script>
                                            
                                             var disqus_config = function () {
-                                            this.page.url = <?php echo Yii::app()->request->hostInfo . Yii::app()->request->url; ?> 
+                                            this.page.url = '<?php echo Yii::app()->request->hostInfo . Yii::app()->request->url; ?>';
                                             //this.page.identifier = PAGE_IDENTIFIER; 
                                             };
                                             
@@ -314,6 +314,7 @@ $cs->registerScriptFile('https://cdn.datatables.net/1.10.10/js/dataTables.founda
 $cs->registerScriptFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/js/dataTables.scroller.min.js", CClientScript::POS_END);
 $cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/element-switcher/element-switcher.js',CClientScript::POS_END);
 $cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/js/app-dataset.js',CClientScript::POS_END);
+$cs->registerScriptFile('http://opendatamanager.disqus.com/count.js', CClientScript::POS_END);
 $cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/datatables.min.css");
 $cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/css/scroller.foundation.min.css");
 $cs->registerCssFile('https://cdn.datatables.net/1.10.10/css/dataTables.foundation.min.css');
