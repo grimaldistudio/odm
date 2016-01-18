@@ -281,6 +281,7 @@ $this->pageTitle=Yii::app()->name;
                                            
                                             var disqus_config = function () {
                                             this.page.url = '<?php echo Yii::app()->request->hostInfo . Yii::app()->request->url; ?>';
+                                             this.language = "it";
                                             //this.page.identifier = PAGE_IDENTIFIER; 
                                             };
                                             
