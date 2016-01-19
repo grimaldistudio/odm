@@ -46,6 +46,7 @@ $this->pageTitle=Yii::app()->name;
                          <li><a href="#" data-switch-rel="info" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-info"></i> Informazioni</a></li>
                          <li><a href="#" data-target="#" data-switch-rel="export" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-download"></i> Esporta</a></li>
                          <li><a href="#" data-switch-rel="embed" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-code"></i> Incorpora</a></li>
+                         <li><a href="#" data-switch-rel="linked" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-share"></i> Linked Data</a></li>
                          <li><a href="#" class="button secondary tiny"><i class="icon-vector"></i> Altre Fonti</a></li>
                          <li><a href="#" data-switch-rel="disqus" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-bubbles"></i> Discuti</a></li>
                        </ul>
@@ -269,6 +270,36 @@ $this->pageTitle=Yii::app()->name;
                       </ul>
             </div>
               
+               <!-- /linked data -->
+             <div class="switch-content hide" id="linked">
+                 <h3>Linked data</h3>
+                    <ul class="accordion" data-accordion>
+                        <li class="accordion-navigation">
+                         
+                          <div id="panel1a" class="content active"> 
+                              <h4>RDF</h4>                             
+                             <p class="background-white">Questi metadati sono stati codificati utilizzando l’ontologia VOID (VOcabulary of Interlinked Dataset) e sono essi stessi dei Linked Data.</p>
+                             <p class="background-white">
+                                 <?php echo CHtml::link('Accedi con un browser HTML', Yii::app()->request->hostInfo.":2020/page" . Yii::app()->request->url ); ?>    
+                                 <?php echo $data['model_anagrafica']->LOD; ?>
+                             </p>
+                             
+                             <p class="background-white">
+                                 <?php echo CHtml::link(Yii::app()->request->hostInfo.":2020/page", 'Accedi con un browser RDF'); ?>  
+                             </p>
+                             <br />
+                             
+                             <h4>SPARQL endpoint </h4>
+                             <p class="background-white">I Client possono inviare query all'endpoint tramite il protocollo SPARQL
+                             Esempio di query: SELECT DISTINCT * WHERE {?s ?p ?o} LIMIT 100
+                          </p>
+                          
+                          </div>
+                        </li>
+                        
+                      </ul>
+            </div>
+              
                  <!-- /disqus content -->
              <div class="switch-content hide" id="disqus">
                  <h3>Discuti</h3>
@@ -315,7 +346,7 @@ $cs->registerScriptFile('https://cdn.datatables.net/1.10.10/js/dataTables.founda
 $cs->registerScriptFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/js/dataTables.scroller.min.js", CClientScript::POS_END);
 $cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/vendor/public/element-switcher/element-switcher.js',CClientScript::POS_END);
 $cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/js/app-dataset.js',CClientScript::POS_END);
-$cs->registerScriptFile('http://opendatamanager.disqus.com/count.js', CClientScript::POS_END);
+$cs->registerScriptFile('http://opendatamanager.disqus.com/count.js', CClientScript::POS_END,array('id'=>'dsq-count-scr'));
 $cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/datatables.min.css");
 $cs->registerCssFile(Yii::app()->theme->baseUrl."/assets/vendor/public/DataTables/Scroller-1.4.0/css/scroller.foundation.min.css");
 $cs->registerCssFile('https://cdn.datatables.net/1.10.10/css/dataTables.foundation.min.css');

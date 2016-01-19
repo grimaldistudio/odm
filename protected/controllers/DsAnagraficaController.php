@@ -53,6 +53,7 @@ class DsAnagraficaController extends Controller
              if ($embed == 1) $this->layout = 'embed';
            
            $model = $this->loadModel($id);
+           $data['model_anagrafica'] = $model;
            $criteria = new CDbCriteria;
            
             $sql='SHOW COLUMNS FROM '.$model->TAB;
@@ -97,18 +98,7 @@ class DsAnagraficaController extends Controller
                 'pagination'=>false,               
 
             ));
-               /*
-                $widget=$this->createWidget('ext.EDataTables.EDataTables', array(
-                    'id'            => 'DsAnagrafica',
-                    'cssFile' =>  Yii::app()->theme->baseUrl.'/assets/css/grid.css',
-                    'dataProvider'  => $dataProvider,
-                    'options' => array('sdom'=>'<"toolbar">frtip', "bProcessing" => true, "scrollCollapse"=>true,  "bPaginate"=> false),
-                    'itemsCssClass'=>'compact',
-                    'ajaxUrl'       => $this->createUrl('/dsanagrafica/view',array('id'=>$id)),
-                    
-                   ));
-                * 
-                */
+               
                    if (!Yii::app()->getRequest()->getIsAjaxRequest()) {
                        if ($embed == 1) :
                          $this->render('view_embed', array('model'=>$model,'dataProvider'=>$dataProvider));
