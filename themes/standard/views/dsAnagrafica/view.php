@@ -281,7 +281,7 @@ $this->pageTitle=Yii::app()->name;
                              <p class="background-white">Questi metadati sono stati codificati utilizzando l’ontologia VOID (VOcabulary of Interlinked Dataset) e sono essi stessi dei Linked Data.</p>
                              <p class="background-white">
                                  <?php echo CHtml::link('Accedi con un browser HTML', Yii::app()->request->hostInfo.":2020/page" . Yii::app()->request->url ); ?>    
-                                 <?php echo $data['model_anagrafica']->LOD; ?>
+                                 <?php //echo $data['model_anagrafica']->LOD; ?>
                              </p>
                              
                              <p class="background-white">

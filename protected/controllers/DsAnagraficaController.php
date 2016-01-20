@@ -127,7 +127,10 @@ class DsAnagraficaController extends Controller
 		
 	}
         
-
+        public function actionRdf($id) {
+                $model = $this->loadModel($id);
+                $this->renderPartial('rdf', array('data'=>$model->LOD));
+        }
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
