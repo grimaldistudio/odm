@@ -280,12 +280,12 @@ $this->pageTitle=Yii::app()->name;
                               <h4>RDF</h4>                             
                              <p class="background-white">Questi metadati sono stati codificati utilizzando l’ontologia VOID (VOcabulary of Interlinked Dataset) e sono essi stessi dei Linked Data.</p>
                              <p class="background-white">
-                                 <?php echo CHtml::link('Accedi con un browser HTML', Yii::app()->request->hostInfo.":2020/page" . Yii::app()->request->url ); ?>    
+                                 <?php echo CHtml::link('Accedi con un browser HTML', Yii::app()->request->hostInfo.":2020/page/ds_anagrafica" . $model->CODICE, array('target'=>'_blank') ); ?>    
                                  <?php //echo $data['model_anagrafica']->LOD; ?>
                              </p>
                              
                              <p class="background-white">
-                                 <?php echo CHtml::link(Yii::app()->request->hostInfo.":2020/page", 'Accedi con un browser RDF'); ?>  
+                                 <?php echo CHtml::link('Accedi con un browser RDF', Yii::app()->request->hostInfo.":2020/page/ds_anagrafica/" . $model->CODICE, array('target'=>'_blank')); ?>  
                              </p>
                              <br />
                              
