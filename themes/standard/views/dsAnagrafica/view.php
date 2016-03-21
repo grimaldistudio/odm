@@ -318,11 +318,7 @@ $this->pageTitle=Yii::app()->name;
                              if(isset($model->LOD)) {
                              $lod = explode("## Link ad altri dataset", $model->LOD);
                              
-                                     if((CHtml::encode($lod[1])!=null)) {
-                                         //echo CHtml::encode($lod[1]);
-                                     }else{
-                                         echo 'Questo dataset non contiene link ad altri dataset.';
-                                        }
+                                    
                                 }                             
                              ?></code></p>             
                           </div>
