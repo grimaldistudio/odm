@@ -8,7 +8,7 @@
 ?>
 
 <li>
-    <a href="dsAnagrafica/view/<?php echo $data->CODICE;?>">
+    <a href="<?php echo $this->createUrl('dsAnagrafica/view',array("id" => $data->CODICE) ); ?>">
     <div><?php echo $data->TITOLO; ?></div>
     <span class="text-center"><?php echo $data->AREA; ?></span>
     <p class="margin-top-20"><?php echo $data->DESCRIZIONE; ?></p>
