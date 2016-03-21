@@ -291,9 +291,12 @@ $this->pageTitle=Yii::app()->name;
                              
                              <h4>SPARQL endpoint </h4>
                              <p class="background-white">I Client possono inviare query all'endpoint tramite il protocollo SPARQL
-                             Esempio di query: SELECT DISTINCT * WHERE {?s ?p ?o} LIMIT 100
+                             Esempio di query: SELECT DISTINCT * WHERE {?s ?p ?o} LIMIT 100                             
                           </p>
-                          
+                          <div class="text-center padding-top-10">
+                          <a class="btn small" href="http://130.211.179.228:2020/sparql" target="_blank"><i class="icon-share-alt"></i> Sparql</a>
+                          <a class="btn small" href="http://130.211.179.228:2020/snorql/" target="_blank"><i class="icon-share-alternitive"></i> AJAX-based SPARQL Explorer</a>
+                          </div>
                           </div>
                         </li>
                         
@@ -308,9 +311,13 @@ $this->pageTitle=Yii::app()->name;
                         <li class="accordion-navigation">
                          
                           <div id="panel-othersource" class="content active">                             
-                             <p class="background-white">Utilizza l'end point Sparql.</p>
+                             <p class="background-white">## Link ad altri dataset</p>
+                             <br />
                              
-                             <p class="background-white"><a href="http://130.211.179.228:2020/snorql/"><i class="fa fa-link"></i> Sparql End Point</a></p>             
+                             <p class="background-white"><code><?php 
+                             $lod = explode("## Link ad altri dataset", $model->LOD);
+                                     echo CHtml::encode($lod[1]);
+                             ?></code></p>             
                           </div>
                         </li>
                         
