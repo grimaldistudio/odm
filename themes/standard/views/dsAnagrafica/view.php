@@ -310,7 +310,7 @@ $this->pageTitle=Yii::app()->name;
                           <div id="panel-othersource" class="content active">                             
                              <p class="background-white">Utilizza l'end point Sparql.</p>
                              
-                             <p class="background-white"><a href=""></a></p>             
+                             <p class="background-white"><a href="http://130.211.179.228:2020/snorql/"><i class="fa fa-link"></i> Sparql End Point</a></p>             
                           </div>
                         </li>
                         
