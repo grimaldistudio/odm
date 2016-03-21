@@ -47,7 +47,7 @@ $this->pageTitle=Yii::app()->name;
                          <li><a href="#" data-target="#" data-switch-rel="export" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-download"></i> Esporta</a></li>
                          <li><a href="#" data-switch-rel="embed" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-code"></i> Incorpora</a></li>
                          <li><a href="#" data-switch-rel="linked" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-share"></i> Linked Data</a></li>
-                         <li><a href="#" class="button secondary tiny"><i class="icon-vector"></i> Altre Fonti</a></li>
+                         <li><a href="#" data-switch-rel="othersource" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-vector"></i> Altre Fonti</a></li>
                          <li><a href="#" data-switch-rel="disqus" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-bubbles"></i> Discuti</a></li>
                        </ul>
                      
@@ -280,7 +280,7 @@ $this->pageTitle=Yii::app()->name;
                               <h4>RDF</h4>                             
                              <p class="background-white">Questi metadati sono stati codificati utilizzando l’ontologia VOID (VOcabulary of Interlinked Dataset) e sono essi stessi dei Linked Data.</p>
                              <p class="background-white">
-                                 <?php echo CHtml::link('Accedi con un browser HTML', Yii::app()->request->hostInfo.":2020/page/ds_anagrafica" . $model->CODICE, array('target'=>'_blank') ); ?>    
+                                 <?php echo CHtml::link('Accedi con un browser HTML', Yii::app()->request->hostInfo.":2020/page/ds_anagrafica/" . $model->CODICE, array('target'=>'_blank') ); ?>    
                                  <?php //echo $data['model_anagrafica']->LOD; ?>
                              </p>
                              
@@ -299,6 +299,25 @@ $this->pageTitle=Yii::app()->name;
                         
                       </ul>
             </div>
+               
+                <!-- /OtherSource content -->
+                
+            <div class="switch-content hide" id="othersource">
+                 <h3>Incorpora</h3>
+                    <ul class="accordion" data-accordion>
+                        <li class="accordion-navigation">
+                         
+                          <div id="panel-othersource" class="content active">                             
+                             <p class="background-white">Utilizza l'end point Sparql.</p>
+                             
+                             <p class="background-white"><a href=""></a></p>             
+                          </div>
+                        </li>
+                        
+                      </ul>
+            </div>
+                
+                <!-- /end -->
               
                  <!-- /disqus content -->
              <div class="switch-content hide" id="disqus">

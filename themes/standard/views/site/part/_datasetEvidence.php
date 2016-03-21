@@ -8,7 +8,9 @@
 ?>
 
 <li>
+    <a href="/dsAnagrafica/view/<?php echo $data->CODICE;?>">
     <div><?php echo $data->TITOLO; ?></div>
     <span class="text-center"><?php echo $data->AREA; ?></span>
     <p class="margin-top-20"><?php echo $data->DESCRIZIONE; ?></p>
+    </a>
 </li>

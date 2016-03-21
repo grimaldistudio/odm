@@ -1,0 +1,32 @@
+{
+  "name": "element-switcher",
+  "main": "element-switcher.js",
+  "version": "2.0.1",
+  "homepage": "https://github.com/markusfalk/element-switcher",
+  "authors": [
+    "Markus Falk <mail@markus-falk.com>"
+  ],
+  "description": "Flip flop toggle elements (AMD)",
+  "license": "MIT",
+  "ignore": [
+    "*.md",
+    "*.html"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "dependencies": {
+    "jquery": ">1.7.0",
+    "jquery.exists": "~1.0.0"
+  },
+  "_release": "2.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.1",
+    "commit": "f14a494fcf2dbcf0666afff2c86fa5a112d63bfc"
+  },
+  "_source": "git://github.com/markusfalk/element-switcher.git",
+  "_target": "~2.0.1",
+  "_originalSource": "element-switcher",
+  "_direct": true
+}
