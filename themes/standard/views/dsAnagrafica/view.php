@@ -91,7 +91,7 @@ $this->pageTitle=Yii::app()->name;
                             <li>RESPONSABILE: <strong><?php echo $model->LEG_UT; ?></strong></li>
                             <li>CREATO IL: <strong><?php echo date('d.m.Y',strtotime($model->D_CRE));?></strong></li>
                             <li>AGGIORNATO IL: <strong><?php echo date('d.m.Y',strtotime($model->D_AGG));?></strong></li>
-                            <li>OPENESS RATING: <img src="http://lab.linkeddata.deri.ie/2010/lod-badges/img/data-badge-4.png" alt="four star open Web data" /></li>
+                            <li>OPENESS RATING: <img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/lab.linkeddata.deri.ie/2010/lod-badges/img/data-badge-4.png" src="http://lab.linkeddata.deri.ie/2010/lod-badges/img/data-badge-4.png" alt="four star open Web data" /></li>
                         </ul>
                     </div>
                 </div>
