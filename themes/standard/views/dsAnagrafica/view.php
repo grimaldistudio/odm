@@ -42,7 +42,7 @@ $this->pageTitle=Yii::app()->name;
                       
                 
                         <ul class="button-group"> 
-                            <li><input type="search" class="" placeholder="Cerca nel dataset" id="opendatasearch" aria-controls="DataTables_Table_0" /></li>
+                         <li><input type="search" class="" placeholder="Cerca nel dataset" id="opendatasearch" aria-controls="DataTables_Table_0" /></li>
                          <li><a href="#" data-switch-rel="info" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-info"></i> Informazioni</a></li>
                          <li><a href="#" data-target="#" data-switch-rel="export" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-download"></i> Esporta</a></li>
                          <li><a href="#" data-switch-rel="embed" data-animation-speed="700" class="button secondary tiny switch-btn"><i class="icon-code"></i> Incorpora</a></li>
@@ -59,7 +59,7 @@ $this->pageTitle=Yii::app()->name;
     
     <div class="row-fluid large-collapse margin-top-10">
         <div class="large-9 columns">
-            <div style="width:100%;">
+            <div style="width:100%; float:left;">
             <?php 
             
             $this->widget('zii.widgets.grid.CGridView', array(
