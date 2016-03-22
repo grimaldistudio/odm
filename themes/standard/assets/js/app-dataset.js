@@ -26,12 +26,12 @@ var calcDataTableHeight = function() {
       
  
 
-table.on( 'init', function () {
+table.on( 'draw', function () {
    $(".dataTables_scroll, .dataTables_scrollBody").height(calcDataTableHeight()+"px");
 } );
 
 
-  //$('.switch-body-content').height(calcDataTableHeight()+"px");
+  $('.switch-body-content').height(calcDataTableHeight()+"px");
 
 $('#opendatasearch').on( 'keyup', function () {
     table.search( this.value ).draw();
