@@ -20,8 +20,7 @@ var calcDataTableHeight = function() {
         scrollY:    true,
         scrollX: true,
         autoWidth: true,  
-        scrollCollapse: true
-     
+        scrollCollapse: true,    
         }
         );
       
