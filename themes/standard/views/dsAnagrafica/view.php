@@ -59,7 +59,7 @@ $this->pageTitle=Yii::app()->name;
     
     <div class="row-fluid large-collapse margin-top-10">
         <div class="large-9 columns">
-            <div style="width:100%; float:left;">
+            <div style="width:100%; float:left; ">
             <?php 
             
             $this->widget('zii.widgets.grid.CGridView', array(

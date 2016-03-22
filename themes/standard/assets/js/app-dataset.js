@@ -31,7 +31,7 @@ table.on( 'init', function () {
 } );
 
 
-  $('.switch-body-content').height(calcDataTableHeight()+"px");
+  //$('.switch-body-content').height(calcDataTableHeight()+"px");
 
 $('#opendatasearch').on( 'keyup', function () {
     table.search( this.value ).draw();
