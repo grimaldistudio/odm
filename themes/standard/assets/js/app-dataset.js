@@ -26,7 +26,7 @@ var calcDataTableHeight = function() {
       
  
 
-table.on( 'draw', function () {
+table.on( 'preAutoFill', function () {
    $(".dataTables_scroll, .dataTables_scrollBody").height(calcDataTableHeight()+"px");
 } );
 
