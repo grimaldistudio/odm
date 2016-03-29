@@ -314,7 +314,7 @@ $this->pageTitle=Yii::app()->name;
                              <p class="background-white">## Link ad altri dataset</p>
                              <br />
                              
-                             <p class="background-white"><code><?php 
+                             <p class="background-white"><code><pre><?php 
                              if(isset($model->LOD)) {
                              $lod = explode("## Link ad altri dataset", $model->LOD);
                              
@@ -327,7 +327,7 @@ $this->pageTitle=Yii::app()->name;
                                      }
                                         
                                 }                             
-                             ?></code></p>             
+                                ?></pre></code></p>             
                           </div>
                         </li>
                         
