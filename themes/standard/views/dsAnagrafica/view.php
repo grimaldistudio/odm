@@ -336,7 +336,7 @@ $this->pageTitle=Yii::app()->name;
                               <p class="background-white">
                                   <strong>Dataset</strong><br />
                               <?php 
-                              echo CHtml::link(Yii::app()->createUrl("api/dsAnagrafica",array("dataset"=>$model->TAB)), Yii::app()->createUrl("api/dsAnagrafica",array("dataset"=>$model->TAB)), array('target'=>'_blank') );
+                              echo CHtml::link(Yii::app()->createUrl("api/dsAnagrafica/dataset/".$model->TAB,array()), Yii::app()->createUrl("api/dsAnagrafica/dataset/".$model->TAB,array()), array('target'=>'_blank') );
                               ?>
                               </p>
                           </div>
