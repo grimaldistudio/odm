@@ -294,14 +294,16 @@ $this->pageTitle=Yii::app()->name;
                              Esempio di query: SELECT DISTINCT * WHERE {?s ?p ?o} LIMIT 100                             
                           </p>
                           <div class="text-center padding-top-10">
-                          <a class="btn small" href="http://130.211.179.228:2020/sparql" target="_blank"><i class="icon-share-alt"></i> Sparql</a>
-                          <a class="btn small" href="http://130.211.179.228:2020/snorql/" target="_blank"><i class="icon-share-alternitive"></i> AJAX-based SPARQL Explorer</a>
+                          <a class="button tiny primary" href="http://130.211.179.228:2020/sparql" target="_blank"><i class="icon-share-alt"></i> Sparql </a>
+                          <a class="button tiny primary" href="http://130.211.179.228:2020/snorql/" target="_blank"><i class="icon-share-alternitive"></i> AJAX-based SPARQL Explorer</a>
                           </div>
-                          
-                           <p class="background-white">## Link ad altri dataset</p>
-                             <br />
+                         
+                                <br />
+                            <h4>Link ad altri dataset </h4>
+                         
+                       
                              
-                             <p class="background-white"><pre><code><?php 
+                             <p class="background-white"><code style="white-space:pre-line;"><?php 
                              if(isset($model->LOD)) {
                              $lod = explode("## Link ad altri dataset", $model->LOD);
                              
@@ -314,7 +316,7 @@ $this->pageTitle=Yii::app()->name;
                                      }
                                         
                                 }                             
-                                ?></code></pre></p>  
+                                ?></code></p>  
                           
                           </div>
                         </li>
@@ -330,11 +332,13 @@ $this->pageTitle=Yii::app()->name;
                         <li class="accordion-navigation">
                          
                           <div id="panel-othersource" class="content active">                             
-                              <h4>API Endpoints</h4>
+                              <h4>API Endpoints per sviluppatori</h4>
+                              <p class="background-white">
+                                  <strong>Dataset</strong><br />
                               <?php 
-                              Yii::$app->urlManager->createUrl();
-                              Yii::app()->createUrl("dsAnagrafica/dataset/",array("dataset"=>$model->TAB)) 
+                              echo CHtml::link(Yii::app()->createUrl("api/dsAnagrafica",array("dataset"=>$model->TAB)), Yii::app()->createUrl("api/dsAnagrafica",array("dataset"=>$model->TAB)), array('target'=>'_blank') );
                               ?>
+                              </p>
                           </div>
                         </li>
                         
