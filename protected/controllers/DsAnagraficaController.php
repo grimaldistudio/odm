@@ -21,6 +21,13 @@ class DsAnagraficaController extends Controller
                 );
         }   
         
+        public function restEvents()
+        {
+        $this->onRest('req.get.dataset.render', function($param1) {
+            $data = $this->apitodataset($param1);
+            echo CJSON::encode( $data );
+        });
+        }
        
 
 	/**
@@ -131,8 +138,33 @@ class DsAnagraficaController extends Controller
                 $model = $this->loadModel($id);
                 $this->renderPartial('rdf', array('data'=>$model->LOD));
         }
+        
+        public function apitodataset($dataset) {
+            $sql = Yii::app()->db->createCommand()
+                ->select('*')
+                ->from($dataset);
+            
+           $count=Yii::app()->db->createCommand('SELECT COUNT(*) FROM '.$dataset)->queryScalar();   
+           
+            $dataProvider=new CSqlDataProvider($sql, array(
+                'totalItemCount'=>$count,
+                'keyField' => 'CODICE',
+                'pagination'=>false,               
 
-	/**
+            ));
+            
+            $data = $dataProvider->getData();
+                     foreach($data as $key=>$datarow) {
+                        foreach($datarow as $val ) {                            
+                            $dataRow['data'][$key][] = utf8_encode((string)($val));                            
+                            
+                        }                    
+                     }
+                     
+                     return ($dataRow);
+        }
+
+        /**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
