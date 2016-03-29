@@ -248,7 +248,7 @@ $this->pageTitle=Yii::app()->name;
                              <p><br />API Endpoint:</p>
                              <p class="background-white"><?php echo CHtml::link(Yii::app()->request->hostInfo . "/api".Yii::app()->request->url); ?></p>
                              <p><br />Istruzioni:</p>
-                             <p class="background-white">In allestimento</p>
+                             <p class="background-white"><a class="button tiny primary" onclick="window.print(); return false;">Stampa</a></p>
                            </div>
                         </li>
                         <li class="accordion-navigation">
