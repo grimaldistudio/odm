@@ -240,21 +240,11 @@ $this->pageTitle=Yii::app()->name;
                                     <li><a href="<?php echo Yii::app()->request->hostInfo."/odm/export/export.php?tipo=struttura&idTab=".$model->TAB; ?>" class="button tiny secondary stats-download" codice="<?php echo $model->CODICE;?>"><i class="icon-download"></i> STRUTTURA</a></li>
                                 </ul>
                           </div>
-                        </li>
-                        <li class="accordion-navigation">
-                          <a href="#panel2a">RESTFull API</a>
-                          <div id="panel2a" class="content">
-                             <p><i class="fi-paint-bucket"></i> Accedi a questo dataset tramite l'endpoint RESTful</p>
-                             <p><br />API Endpoint:</p>
-                             <p class="background-white"><?php echo CHtml::link(Yii::app()->request->hostInfo . "/api".Yii::app()->request->url); ?></p>
-                             <p><br />Istruzioni:</p>
-                             <p class="background-white"><a class="button tiny primary" onclick="window.print(); return false;">Stampa</a></p>
-                           </div>
-                        </li>
+                        </li>                       
                         <li class="accordion-navigation">
                           <a href="#panel3a">Stampa</a>
                           <div id="panel3a" class="content">
-                              In allestimento
+                              <p class="background-white"><a class="button tiny primary" onclick="window.print(); return false;">Stampa</a></p>
                               </div>
                         </li>
                       </ul>
@@ -343,6 +333,7 @@ $this->pageTitle=Yii::app()->name;
                          
                           <div id="panel-othersource" class="content active">                             
                               <h4>API Endpoints per sviluppatori</h4>
+                              <p><i class="fi-paint-bucket"></i> Accedi a questo dataset tramite l'endpoint RESTful</p>
                               <p class="background-white">
                                   <strong>Dataset</strong><br />
                               <?php 

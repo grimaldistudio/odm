@@ -47,7 +47,7 @@
             <div class="row">             
                     <div class="large-12 columns">   
 
-                        <a href="/" class="marker left" title="<?php echo ''; ?>">
+                        <a href="<?php echo Yii::app()->createUrl('site/index');?>" class="marker left" title="<?php echo ''; ?>">
                            <img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/brand.png" alt="" />
                         </a>           
                                                 

@@ -39,7 +39,7 @@ class SiteController extends Controller
                         'search'=>array(
                                 'class'=>'ext.esearch.SearchAction',
                                 'model'=>'DsAnagrafica',
-                                'attributes'=>array('TITOLO'),
+                                'attributes'=>array('TITOLO','LTAG'),
                             ),
         
 		);
