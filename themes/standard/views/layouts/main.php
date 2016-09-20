@@ -76,7 +76,7 @@
         <div class="row">
             <div class="large-6 columns">               
                 <div class="text-left">
-                    <p><small>BigDataLab Project co-financed by POR FESR LAZIO 2007 - 2013</small><br/>
+                    <p><small>BigDataLab Project co-financed by POR FESR LAZIO 2007 - 2013</small>
                         <img src="http://www.visitbigdatalab.it/assets/img/porfesrlazio.png" /><br/>
                         CRESCE L'EUROPA NEL LAZIO
                     </p>
