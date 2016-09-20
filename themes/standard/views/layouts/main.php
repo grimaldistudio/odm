@@ -74,16 +74,16 @@
     
      <footer>
         <div class="row">
-            <div class="large-6 columns">               
+            <div class="large-8 columns">               
                 <div class="text-left">
                     <p><small>BigDataLab Project co-financed by POR FESR LAZIO 2007 - 2013</small>
-                        <img src="http://www.visitbigdatalab.it/assets/img/porfesrlazio.png" /><br/>
-                        CRESCE L'EUROPA NEL LAZIO
+                        <img src="http://www.visitbigdatalab.it/assets/img/porfesrlazio.png" /><small>
+                            CRESCE L'EUROPA NEL LAZIO</small>
                     </p>
                 </div>
                     
             </div>
-            <div class="large-6 columns">               
+            <div class="large-4 columns">               
                 <div class="text-right">
                     <p>
                         &copy; <?php echo date("Y"); ?> Code <?php echo Yii::app()->session['clientID']; ?> - ver. 1.0.1 <img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/odm.png" />
